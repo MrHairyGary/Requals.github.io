@@ -4,8 +4,6 @@
 <style>
   p {
    text-align: center;
-   -webkit-text-stroke-color: black;
-   -webkit-text-stroke-width: thin;
   }
 </style>
 </head>
@@ -18,7 +16,7 @@
   {
     o++
     element.style.color = `hsl(${o % 360}, 100%, 50%)`;
-    element.innerHTML = `${o % 360}`;
+    element.innerHTML = Math.random().toString();
   },10)
 </script>
 </body>
