@@ -8,7 +8,7 @@
   setInterval(function()
   {
     o++
-    element.style.color = `hsl(${Math.mod(o,360)}, 100%, 50%)`
+    element.style.color = `hsl(${o%360}, 100%, 50%)`
   },10)
 </script>
 </body>
