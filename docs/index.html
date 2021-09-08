@@ -8,12 +8,12 @@
 <p id="rainbow" style="color:red;font-size:50px">HOW</p>
 <script>
   let element = document.getElementById("rainbow");
-  let bodyt = document.getElementsByClassName("body");
   let o = 0
   setInterval(function()
   {
     o++
     element.style.color = `hsl(${o % 360}, 100%, 50%)`;
+    element.innerHTML = `${o % 360}`;
   },10)
 </script>
 </body>
