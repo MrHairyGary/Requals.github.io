@@ -8,7 +8,7 @@
 </style>
 </head>
 <body>
-<p id="rainbow" style="color:red;font-size:50px">At their</p>
+<p id="rainbow" style="color:red;font-size:50px;top:0px">Drake has the most lit meat locker,,,,</p>
 <script>
   let element = document.getElementById("rainbow");
   let o = 0
@@ -17,7 +17,7 @@
     o++
     element.style.color = `hsl(${o % 360}, 100%, 50%)`;
     element.style.transform = `rotate(${Math.sin(o / 100) / 2}rad)`;
-    element.style.top = `${30+Math.sin(o)*30}px`;
+    element.style.top = `${30 + Math.sin(o) * 30}px`;
   },10)
 </script>
 </body>
