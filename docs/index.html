@@ -8,7 +8,7 @@
 </style>
 </head>
 <body>
-<p id="rainbow" style="color:red;font-size:50px">Placeholder</p>
+<p id="rainbow" style="color:red;font-size:50px">At their</p>
 <script>
   let element = document.getElementById("rainbow");
   let o = 0
@@ -16,7 +16,7 @@
   {
     o++
     element.style.color = `hsl(${o % 360}, 100%, 50%)`;
-    element.innerHTML = `rotate(${o % 360}deg)`;
+    element.style.transform = `rotate(${o % 360}deg)`;
   },10)
 </script>
 </body>
