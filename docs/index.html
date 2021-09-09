@@ -17,6 +17,7 @@
     o++
     element.style.color = `hsl(${o % 360}, 100%, 50%)`;
     element.style.transform = `rotate(${Math.sin(o / 100) / 2}rad)`;
+    element.style.top = `${30+Math.sin(o)*30}px`;
   },10)
 </script>
 </body>
