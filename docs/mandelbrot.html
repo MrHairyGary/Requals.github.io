@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script data-type="complexfunctions">
+  console.log("abcdefg")
+</script>
 <style>
   .header{
    font-size: 50px;
@@ -21,9 +24,6 @@
 <script>
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
-function toHex(color) {
- return (color[0]+(color[1]*256)+(color[2]*65536)).toString(16);
-}
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   let bw = Math.round(Math.random()*360)
