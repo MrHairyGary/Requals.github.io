@@ -6,9 +6,23 @@
    font-size: 50px;
    font-family: Arial;
   }
+  .centered{
+   text-align: center; 
+  }
 </style>
 </head>
 <body>
-<h class="header">Mandelbrot Set Testing</h>
+<h class="header center">Mandelbrot Set Testing</h>
+<canvas id="mandelbrot" width="200" height="200"></canvas>
+<script>
+var fractal = document.getElementById("mandelbrot")
+var ctx = fractal.getContext("2d")
+ctx.fillColor = "#00FF00"
+for (let x = 0; x < 200; x++) {
+ for (let y = 0; y < 200; y++) {
+  ctx.fillRect(x,y,1,1) 
+ }
+}
+</script>
 </body>
 </html>
