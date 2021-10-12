@@ -27,7 +27,7 @@ function toHex(color) {
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   let bw = Math.round(Math.random()*360)
-  ctx.fillStyle = `HSL(${bw},1,1)`
+  ctx.fillStyle = `HSL(${bw},100%,100%)`
   ctx.fillRect(x,y,1,1) 
  }
 }
