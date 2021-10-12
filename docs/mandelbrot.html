@@ -21,6 +21,9 @@
 <script>
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
+function toHex(r,g,b) {
+ return (r+(g*256)+(b*65536)).toString(16)
+}
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   ctx.fillStyle = Math.round(Math.random()*16581375).toString(16)
