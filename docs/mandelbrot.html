@@ -35,7 +35,7 @@ var ctx = fractal.getContext("2d")
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   let point = new complex(x-100,y-100)
-  ctx.fillStyle = `HSL(${((360/(2*Math.PI))*Math.atan2(y-100,x-100))%360},${100*modular(point)},50%)`
+  ctx.fillStyle = `HSL(${((360/(2*Math.PI))*Math.atan2(y-100,x-100))%360},${100*modular(point)}%,50%)`
   ctx.fillRect(x,y,1,1) 
  }
 }
