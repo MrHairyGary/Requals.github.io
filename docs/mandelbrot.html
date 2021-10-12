@@ -8,6 +8,9 @@
       this.imaginary = imaginary
     }
   }
+  function modular(z) {
+   return Math.pow((z.real*z.real)+(z.imaginary*z.imaginary),0.5) 
+  }
 </script>
 <style>
   .header{
@@ -31,13 +34,11 @@ var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
-  let bw = Math.round(Math.random()*360)
-  ctx.fillStyle = `HSL(${bw},100%,50%)`
+  let point = new complex(x-100,y-100)
+  ctx.fillStyle = `HSL(${((360/(2*Math.PI))*Math.atan2(y-100,x-100))%360},${100*modular(point)},50%)`
   ctx.fillRect(x,y,1,1) 
  }
 }
-let g = new complex(1,1)
-console.log(g.real)
 </script>
 </body>
 </html>
