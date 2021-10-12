@@ -27,7 +27,7 @@ function toHex(r,g,b) {
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   const bw = Math.round(Math.random()*255)
-  ctx.fillStyle = toHex()
+  ctx.fillStyle = toHex(bw,bw,bw)
   ctx.fillRect(x,y,1,1) 
  }
 }
