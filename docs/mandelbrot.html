@@ -21,9 +21,9 @@
 <script>
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
-ctx.fillStyle = "#00FF00"
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
+  ctx.fillStyle = Math.round(Math.random()*16581375).toString(16)
   ctx.fillRect(x,y,1,1) 
  }
 }
