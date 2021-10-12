@@ -7,7 +7,9 @@
    font-family: Arial;
   }
   .center{
-   left: 50vw
+   display: block;
+   left-margin: auto;
+   right-margin: auto;
   }
 </style>
 </head>
@@ -18,7 +20,7 @@
 <script>
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
-ctx.fillColor = "#00FF00"
+ctx.fillStyle = "#00FF00"
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
   ctx.fillRect(x,y,1,1) 
