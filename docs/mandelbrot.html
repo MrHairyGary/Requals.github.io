@@ -26,7 +26,8 @@ function toHex(r,g,b) {
 }
 for (let x = 0; x < 200; x++) {
  for (let y = 0; y < 200; y++) {
-  ctx.fillStyle = Math.round(Math.random()*16581375).toString(16)
+  const bw = Math.round(Math.random()*255)
+  ctx.fillStyle = toHex()
   ctx.fillRect(x,y,1,1) 
  }
 }
