@@ -3,13 +3,19 @@
 <head>
 <script data-type="complexfunctions">
   class complex {
-    constructor(real,imaginary) {
-      this.real = real
-      this.imaginary = imaginary
+    constructor(r,i) {
+      this.r = r
+      this.i = i
     }
   }
   function modular(z) {
-   return Math.pow((z.real*z.real)+(z.imaginary*z.imaginary),0.5) 
+   return Math.pow((z.r*z.r)+(z.i*z.i),0.5) 
+  }
+  function divide(z,c) {
+   return new complex(,)
+  }
+  function multiply(z,c) {
+   return new complex((z.r*c.r)-(c.i*z.i),) // finish this line
   }
 </script>
 <style>
@@ -32,7 +38,7 @@
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
 function transform(input) {
- return new complex(input.real/100,input.imaginary/100) 
+ return new complex(input.r/100,input.i/100) 
 }
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
