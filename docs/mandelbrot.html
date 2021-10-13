@@ -31,11 +31,15 @@
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
+function transform(input) {
+ return new complex(input.real/100,input.imaginary/100) 
+}
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
 for (let x = 0; x < 500; x++) {
  for (let y = 0; y < 500; y++) {
-  let point = new complex(x-250,y-250)
+  let point = transform(new complex(x-250,y-250))
+  
   ctx.fillStyle = `HSL(${((360/(2*Math.PI))*Math.atan2(y - 250,x - 250))%360},${100*modular(point)}%,50%)`
   ctx.fillRect(x,y,1,1) 
  }
