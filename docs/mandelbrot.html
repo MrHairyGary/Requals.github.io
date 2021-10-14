@@ -50,9 +50,6 @@ function transform(input) {
  returnRA = power(trDiv,trDiv)
  return returnRA
 }
-const testc = power(new complex(4,0),new complex(2,0))
-document.getElementById("test").innerHTML = testc.r.toString() + " + " + testc.i.toString() + "i"
-function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
 }
 var fractal = document.getElementById("mandelbrot")
@@ -65,6 +62,7 @@ for (let x = 0; x < 250; x++) {
   ctx.fillRect(x,y,1,1) 
  }
 }
+document.getElementById("test").innerHTML = fractal.toDataURL
 </script>
 </body>
 </html>
