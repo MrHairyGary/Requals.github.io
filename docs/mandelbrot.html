@@ -19,10 +19,9 @@
    return returnR
   }
   function power(z,c) {
-   let rr = 2
-   let ri = 2
-   let multiply = Math.pow((z.y*z.y)+(z.x*z.x),c.r/2)*Math.pow(Math.E,-c.i*atan2(z.i,z.r))
-   return new complex(rr,ri)
+   let rr = (c.r*atan2(z.i,z.r))+(0.5*c.i*Math.log((z.r*z.r)+(z.i*z.i)))
+   let mult = Math.pow((z.i*z.i)+(z.r*z.r),c.r/2)*Math.pow(Math.E,-1*c.i*atan2(z.i,z.r))
+   return multiply(new complex (mult,0),new complex(Math.cos(rr),Math.sin(rr)))
   }
 </script>
 <style>
@@ -49,7 +48,7 @@ function transform(input) {
  returnRA = multiply(input,input)
  return returnRA
 }
-const testc = multiply(new complex(2,0),new complex(0,1))
+const testc = power(new complex(4,0),new complex(2,0))
 document.getElementById("test").innerHTML = testc.r.toString() + " + " + testc.i.toString() + "i"
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
