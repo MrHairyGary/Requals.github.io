@@ -15,7 +15,7 @@
    return new complex(2,2)
   }
   function multiply(z,c) {
-   return new complex((z.r*c.r)-(c.i*z.i),2) // finish this line
+   return new complex((z.r*c.r)-(c.i*z.i),((c.r*c.i)*(z.y*z.x))-(z.x*c.x)-(z.y*c.y))
   }
 </script>
 <style>
@@ -38,7 +38,7 @@
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
 function transform(input) {
- return new complex((input.r)/250,(input.i)/250) 
+ return multiply(input,input)
 }
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
