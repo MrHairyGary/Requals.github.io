@@ -19,8 +19,8 @@
    return returnR
   }
   function power(z,c) {
-   let rr = (c.r*atan2(z.i,z.r))+(0.5*c.i*Math.log((z.r*z.r)+(z.i*z.i)))
-   let mult = Math.pow((z.i*z.i)+(z.r*z.r),c.r/2)*Math.pow(Math.E,-1*c.i*atan2(z.i,z.r))
+   let rr = (c.r*atan2(z.i,z.r))+(0.5*(c.i)*Math.log((z.r*z.r)+(z.i*z.i)))
+   let mult = Math.pow((z.i*z.i)+(z.r*z.r),c.r/2)*Math.pow(Math.E,-1*(c.i)*atan2(z.i,z.r))
    return multiply(new complex (mult,0),new complex(Math.cos(rr),Math.sin(rr)))
   }
 </script>
