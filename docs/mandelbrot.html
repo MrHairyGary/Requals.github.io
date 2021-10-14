@@ -46,7 +46,8 @@
 <canvas class="center-canvas" id="mandelbrot" width="1000" height="1000"></canvas>
 <script>
 function transform(input) {
- returnRA = multiply(input,input)
+ trDiv = divide(input,new complex(40,0))
+ returnRA = power(trDiv,trDiv)
  return returnRA
 }
 const testc = power(new complex(4,0),new complex(2,0))
