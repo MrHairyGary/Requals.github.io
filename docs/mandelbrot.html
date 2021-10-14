@@ -44,7 +44,7 @@ function transform(input) {
  returnRA = multiply(divrRA,divrRA)
  return returnRA
 }
-const testc = multiply(new complex(4,1),new complex(4,1))
+const testc = multiply(new complex(4,0),new complex(4,0))
 document.getElementById("test").innerHTML = testc.r.toString() + " + " + testc.i.toString() + "i"
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
