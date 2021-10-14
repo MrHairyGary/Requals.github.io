@@ -50,7 +50,7 @@ function transform(input) {
  returnRA = power(trDiv,trDiv)
  return returnRA
 }
-function clamp(value,min,max)
+function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
 }
 var fractal = document.getElementById("mandelbrot")
@@ -63,7 +63,7 @@ for (let x = 0; x < 250; x++) {
   ctx.fillRect(x,y,1,1) 
  }
 }
-document.getElementById("test").innerHTML = fractal.toDataURL
+document.getElementById("test").innerHTML = fractal.toDataURL('image/png')
 </script>
 </body>
 </html>
