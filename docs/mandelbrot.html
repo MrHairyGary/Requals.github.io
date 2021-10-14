@@ -35,6 +35,7 @@
 </head>
 <body>
 <p class="header">Domain Coloring Testing</p>
+<p id="test"></p>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
@@ -43,6 +44,8 @@ function transform(input) {
  returnRA = multiply(divrRA,divrRA)
  return returnRA
 }
+const testc = multiply(new complex(4,1),new complex(4,1))
+document.getElementById("test").innerHTML = testc.r.toString() + " + " + testc.i.toString() + "i"
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
 }
