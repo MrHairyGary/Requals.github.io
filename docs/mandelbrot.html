@@ -12,10 +12,10 @@
    return Math.pow((z.r*z.r)+(z.i*z.i),0.5) 
   }
   function divide(z,c) {
-   return new complex(2,2)
+   return new complex(2,2) // finish this later, complex functions are all but fun to program
   }
   function multiply(z,c) {
-   let returnR = (new complex((z.r*c.r)-(c.i*z.i),((c.r*c.i)*(z.i*z.r))-(z.r*c.r)-(z.i*c.i)))
+   let returnR = (new complex((z.r*c.r)-(c.i*z.i),((c.r+c.i)*(z.i+z.r))-(z.r*c.r)-(z.i*c.i)))
    return returnR
   }
   const i = new complex(0,1)
@@ -36,7 +36,7 @@
 </head>
 <body>
 <p class="header">Domain Coloring Testing</p>
-<p id="testing"></p>
+<p id="testing"></p>t5
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
