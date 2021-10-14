@@ -18,6 +18,7 @@
    let returnR = (new complex((z.r*c.r)-(c.i*z.i),((c.r*c.i)*(z.i*z.r))-(z.r*c.r)-(z.i*c.i)))
    return returnR
   }
+  const i = new complex(0,1)
 </script>
 <style>
   .header{
@@ -35,6 +36,7 @@
 </head>
 <body>
 <p class="header">Domain Coloring Testing</p>
+<p id="testing"></p>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
@@ -44,6 +46,7 @@ function transform(input) {
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
 }
+document.getElementById("testing").innerHTML = (multiply(i,i)).toString()
 var fractal = document.getElementById("mandelbrot")
 var ctx = fractal.getContext("2d")
 for (let x = 0; x < 500; x++) {
