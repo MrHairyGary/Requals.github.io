@@ -15,7 +15,7 @@
    return new complex(2,2)
   }
   function multiply(z,c) {
-   return new complex((z.r*c.r)-(c.i*z.i),((c.r*c.i)*(z.y*z.x))-(z.x*c.x)-(z.y*c.y))
+   return new complex((z.r*c.r)-(c.i*z.i),((c.r*c.i)*(z.i*z.r))-(z.r*c.r)-(z.i*c.i))
   }
 </script>
 <style>
