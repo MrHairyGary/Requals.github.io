@@ -41,7 +41,7 @@
 </head>
 <body>
 <p class="header">Domain Coloring Testing</p>
-<p id="test"></p>
+<a id="test" href="images/image0.png" download="domaincolor">Download PNG File</a>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="250" height="250"></canvas>
 <script>
@@ -63,7 +63,7 @@ for (let x = 0; x < 250; x++) {
   ctx.fillRect(x,y,1,1) 
  }
 }
-document.getElementById("test").innerHTML = fractal.toDataURL('image/png')
+document.getElementById("test").href = fractal.toDataURL('image/png')
 </script>
 </body>
 </html>
