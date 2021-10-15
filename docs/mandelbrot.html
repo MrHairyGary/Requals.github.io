@@ -59,7 +59,7 @@ for (let x = 0; x < 250; x++) {
  for (let y = 0; y < 250; y++) {
   let pointa = new complex(x-125,y-125)
   let point = transform(pointa)
-  ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${100-clamp((50*modular(point)),0,50)}%)`
+  ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${50-clamp((50*modular(point)),0,50)}%)`
   ctx.fillRect(x,y,1,1) 
  }
 }
