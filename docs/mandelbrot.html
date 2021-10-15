@@ -68,7 +68,7 @@
 <script>
 function transform(input) {
  trDiv = divide(input,new complex(40,0))
- returnRA = power(new complex(Math.E,0),multiply(new complex(0,1),trDiv))
+ returnRA = power(new complex(Math.E,0),trDiv)
  return returnRA
 }
 function clamp(value,min,max) {
