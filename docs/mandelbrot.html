@@ -37,11 +37,15 @@
    margin: auto;
    width: 250px;
   }
+  .button{
+   border: 2px solid black;
+   background-color: linear-gradient(grey,white);
+  }
 </style>
 </head>
 <body>
 <p class="header">Domain Coloring Testing</p>
-<a id="test" href="images/image0.png" download="domaincolor">Download PNG File</a>
+<a id="test" href="images/image0.png" download="domaincolor" class="download">Download PNG File</a>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="250" height="250"></canvas>
 <script>
