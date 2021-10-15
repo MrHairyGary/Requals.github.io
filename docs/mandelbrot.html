@@ -24,6 +24,15 @@
    let mult = Math.pow((z.i*z.i)+(z.r*z.r),c.r/2)*Math.pow(Math.E,-1*(c.i)*Math.atan2(z.i,z.r))
    return new complex(Math.cos(rr)*mult,Math.sin(rr)*mult)
   }
+  function sin(z) {
+    return new complex(sin(z.r)*cosh(z.i),cos(z.r)*sinh(z.i))
+  }
+  function cos(z) {
+    return new complex(cos(z.r)*cosh(z.i),-1*sin(z.r)*sinh(z.i))
+  }
+  function tan(z) {
+   return divide(sin(z),cos(z)) 
+  }
 </script>
 <style>
   .header{
