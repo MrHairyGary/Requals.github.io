@@ -25,10 +25,10 @@
    return new complex(Math.cos(rr)*mult,Math.sin(rr)*mult)
   }
   function sin(z) {
-    return new complex(sin(z.r)*cosh(z.i),cos(z.r)*sinh(z.i))
+    return new complex(Math.sin(z.r)*Math.cosh(z.i),Math.cos(z.r)*Math.sinh(z.i))
   }
   function cos(z) {
-    return new complex(cos(z.r)*cosh(z.i),-1*sin(z.r)*sinh(z.i))
+    return new complex(Math.cos(z.r)*Math.cosh(z.i),-1*Math.sin(z.r)*Math.sinh(z.i))
   }
   function tan(z) {
    return divide(sin(z),cos(z)) 
