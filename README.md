@@ -18,6 +18,7 @@ I wanted to test HTML canvas for faster domain coloring on a website.
 
 > Why did you make Drake Meat Locker?
 *I wanted to test HTML*
+
 > Why make a domain coloring website?
 *Desmos was slower*
 
