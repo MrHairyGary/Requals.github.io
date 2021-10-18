@@ -36,6 +36,10 @@
   function sec(z) {
    return divide(new complex(1,0),z) 
   }
+  function conj(z) {
+    returno = new complex(z.r,-z.i)
+    return returno
+  }
 </script>
 <style>
   .header{
@@ -74,7 +78,7 @@
 <script>
 function transform(o) {
  z = divide(o,new complex(40,0))
- returnRA = power(new complex(z.i,z.r),z)
+ returnRA = power(z,conj(z))
  return returnRA
 }
 function clamp(value,min,max) {
