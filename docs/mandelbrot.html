@@ -78,7 +78,7 @@
 <script>
 function transform(o) {
  z = divide(o,new complex(40,0))
- returnRA = power(cos(z),new complex(0,-1))
+ returnRA = power(cos(z),sin(z))
  return returnRA
 }
 function clamp(value,min,max) {
