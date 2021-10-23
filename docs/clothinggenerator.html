@@ -21,10 +21,11 @@
 <body>
 <p class="header">Clothing Generated!</p>
 <br>
- <canvas class="centercanvas" id="clothing" width="585" height="559"></canvas>
+<canvas class="centercanvas" id="clothing" width="585" height="559"></canvas>
 <p class="header" id="debug">If you see this, something went wrong.</p>
 <script>
-document.getElementById("debug").delete()
+let debugText = document.getElementById("debug")
+debugText.delete
 let canvas = document.getElementById("clothing")
 let ctx = canvas.getContext("2d")
 const templateclothing = new Image(585,559)
