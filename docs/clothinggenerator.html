@@ -24,12 +24,15 @@
 <canvas class="centercanvas" id="clothing" width="585" height="559"></canvas>
 <p class="header" id="debug">If you see this, something went wrong.</p>
 <script>
+function drawImageP(image) {
+ ctx.drawImage(image,0,0);
+}
 let debugText = document.getElementById("debug");
 debugText.remove();
 let canvas = document.getElementById("clothing");
 let ctx = canvas.getContext("2d");
 let templateclothing = new Image(585,559);
-templateclothing.onload = ctx.drawImage(templateclothing,0,0);
+templateclothing.onload = drawImageP(templateclothing)
 templateclothing.src = "images/shirttemplate.png";
 </script>
 </body>
