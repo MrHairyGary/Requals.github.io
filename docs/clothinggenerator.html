@@ -11,7 +11,7 @@
  padding: 0;
  display: block;
  margin: auto;
- width: 500px;
+ width: 585px;
 }
 .center {
  text-align: center;
@@ -24,6 +24,9 @@
 <script>
 let canvas = document.getElementById("clothing")
 let ctx = canvas.getContext("2d")
+const templateclothing = new Image(585,559)
+templateclothing.src = "images/shirttemplate.png"
+ctx.drawImage(templateclothing,0,0)
 </script>
 </body>
 </html>
