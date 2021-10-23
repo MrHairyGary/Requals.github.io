@@ -32,8 +32,9 @@ function drawImageP(image) {
 let debugText = document.getElementById("debug");
 debugText.remove();
 let templateclothing = new Image(585,559);
-templateclothing.onload = drawImageP(templateclothing)
 templateclothing.src = "images/shirttemplate.png";
+console.log(templateclothing)
+templateclothing.onload = drawImageP(templateclothing)
 </script>
 </body>
 </html>
