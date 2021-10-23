@@ -25,7 +25,7 @@
 <p class="header" id="debug">If you see this, something went wrong.</p>
 <script>
 let debugText = document.getElementById("debug")
-debugText.delete
+debugText.remove()
 let canvas = document.getElementById("clothing")
 let ctx = canvas.getContext("2d")
 let templateclothing = new Image(585,559)
