@@ -26,15 +26,13 @@
 <script>
 let canvas = document.getElementById("clothing");
 let ctx = canvas.getContext("2d");
-function drawImageP(image) {
- ctx.drawImage(image,0,0);
-}
 let debugText = document.getElementById("debug");
 debugText.remove();
 let templateclothing = new Image(585,559);
 templateclothing.src = "images/shirttemplate.png";
-console.log(templateclothing)
-templateclothing.onload = drawImageP(templateclothing)
 </script>
+<script>
+ ctx.drawImage(templateclothing,0,0);
+ </script>
 </body>
 </html>
