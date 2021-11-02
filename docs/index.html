@@ -14,7 +14,7 @@
   .link {
    font-family: Optima;
    font-size: 40px;
-   border: 10px solid #454443;
+   border: 5px solid #454443;
    border-radius: 20px;
    color: blue;
    text-decoration: none;
@@ -24,11 +24,21 @@
    color: blue; 
    text-decoration: none;
   }
+  .flex-container {
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   border: 7px solid #393939
+  }
+  .flex-container div {
+   flex: 1; 
+  }
 </style>
 </head>
 <body>
 <h1 class="center">My HTML Stuff</h1>
 <br>
+<div class="flex-container">
 <div class="center link">
   <figure>
     <a href="testarchive.html"><img src="images/image0.png" height="100" width="100"></a>
@@ -47,6 +57,7 @@
   <a href="fence.html"><img src="images/IMG_0975.jpg" height="100" width="100"></a>
     <figcaption><a href="fence.html">Fence Game</a></figcaption>
   </figure>
+</div>
 </div>
 </body>
 </html>
