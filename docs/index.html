@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-</style>
-</head>
-<body>
-  <canvas id="glcanvas" width="400px" height="400px"></canvas>
-  <div id="error"></div>
   <script>
   function main() {
-  let canvas = document.querySelector("#glcanvas");
-  let gl = document.getContext("webgl");
+  const canvas = document.querySelector("#glcanvas");
+  const gl = document.getContext("webgl");
   if (gl === null) {
     alert("Your browser does not support WebGL")
     return;
@@ -18,7 +12,15 @@
   gl.clearColor(0.0,0.0,0.0,1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   }    
-  window.onload = main;
+  window.onload = main();
+  alert("billy is dead");
   </script>
+<style>
+</style>
+</head>
+<body>
+  <canvas id="glcanvas" width="400px" height="400px"></canvas>
+  <div id="error"></div>
+  
 </body>
 </html>
