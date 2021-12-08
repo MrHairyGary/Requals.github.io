@@ -3,6 +3,8 @@
 <head>
   <script>
   function main() {
+  alert("2")
+
   const canvas = document.querySelector("#glcanvas");
   const gl = document.getContext("webgl");
   if (gl === null) {
@@ -13,14 +15,11 @@
   gl.clear(gl.COLOR_BUFFER_BIT);
   }    
   window.onload = main();
-  alert("billy is dead");
   </script>
 <style>
 </style>
 </head>
 <body>
   <canvas id="glcanvas" width="400px" height="400px"></canvas>
-  <div id="error"></div>
-  
 </body>
 </html>
