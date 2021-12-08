@@ -3,10 +3,10 @@
 <head>
   <script>
   function main() {
-  alert("2")
+  alert("Debug alert")
 
   const canvas = document.querySelector("#glcanvas");
-  const gl = document.getContext("webgl");
+  const gl = canvas.getContext("webgl");
   if (gl === null) {
     alert("Your browser does not support WebGL")
     return;
