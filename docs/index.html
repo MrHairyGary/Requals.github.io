@@ -2,67 +2,23 @@
 <html>
 <head>
 <style>
-  .center {text-align:center;}
-  h1 {
-   background-color: #454443;
-   font-family: Optima;
-   margin: 0;
-  }
-  body {
-    background-color: #202020
-  }
-  .link {
-   font-family: Optima;
-   font-size: 40px;
-   border: 5px solid #454443;
-   border-radius: 20px;
-   color: blue;
-   text-decoration: none;
-   background-color: #656663
-  }
-  a:visited {
-   color: blue; 
-   text-decoration: none;
-  }
-  .flex-container {
-   display: flex;
-   width: 600px;
-   border: 7px solid #393939;
-   flex-wrap: wrap;
-   flex-basis: 300px;
-   justify-content: center;
-  }
-  .flex-container > div {
-   width: 300px;
-   flex: 1; 
-   flex-basis: 200px;
-   height: 300px;
-  }
 </style>
 </head>
 <body>
-<h1 class="center">My HTML Stuff</h1>
-<br>
-<div class="flex-container">
-<div class="center link">
-  <figure>
-    <a href="testarchive.html"><img src="images/image0.png" height="100" width="100"></a>
-    <figcaption><a href="testarchive.html">Archive of Tests</a></figcaption>
-  </figure>
-</div>
-<br>
-<div class="center link">
-  <figure>
-  <a href="mandelbrot.html"><img src="images/IMG_0975.jpg" height="100" width="100"></a>
-    <figcaption><a href="mandelbrot.html">Domain Coloring Test</a></figcaption>
-  </figure>
-</div>
-<div class="center link">
-  <figure>
-  <a href="fence.html"><img src="images/IMG_0975.jpg" height="100" width="100"></a>
-    <figcaption><a href="fence.html">Fence Game</a></figcaption>
-  </figure>
-</div>
-</div>
+  <canvas id="glcanvas" width="400px" height="400px"></canvas>
+  <div id="error"></div>
+  <script>
+  function main() {
+  let canvas = document.querySelector("#glcanvas");
+  let gl = document.getContext("webgl");
+  if (gl === null) {
+    alert("Your browser does not support WebGL")
+  }
+  gl.clearColor(0.0,0.0,0.0,1.0)
+  gl.clear(gl.COLOR_BUFFER_BIT)
+    
+  }    
+  window.onload = main;
+  </script>
 </body>
 </html>
