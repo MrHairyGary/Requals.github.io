@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-  <canvas id="glcanvas" width="100vw" height="100vh"></canvas>
+  <canvas id="glcanvas" width="500px" height="500px"></canvas>
 </body>
 <script>
   function main() {
@@ -21,7 +21,7 @@
     return;
   }
   const urlp = new URLSearchParams(window.location.search)
-  ctx.font - "200px Arial"
+  ctx.font - "40px Arial"
   ctx.fillText(urlp.get("text"),10,40)
 }    
   window.onload = main();
