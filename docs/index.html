@@ -15,14 +15,15 @@
 <script>
   function main() {
   const canvas = document.querySelector("#glcanvas");
-  const gl = canvas.getContext("webgl");
-  if (gl === null) {
-    alert("Your browser does not support WebGL")
+  const ctx = canvas.getContext("2d");
+  if (ctx === null) {
+    alert("Your browser does not support Canvas")
     return;
   }
-  gl.clearColor(0.0,0.0,0.0,1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  }    
+  const urlp = new URLSearchParams(window.location.search)
+  ctx.font - "30px Arial"
+  ctx.fillText(urlp.get("text"),10,40)
+}    
   window.onload = main();
   </script>
 </html>
