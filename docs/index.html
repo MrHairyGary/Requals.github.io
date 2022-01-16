@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Param Testing</title>
-<style>
-  canvas{
-  position: fixed;
-  margin: -8px;
-  }
-</style>
-</head>
-<body>
-  <canvas id="glcanvas" width="1000px" height="1000px"></canvas>
-</body>
-<script>
-  function main() {
-  const canvas = document.querySelector("#glcanvas");
-  const ctx = canvas.getContext("2d");
-  if (ctx === null) {
-    alert("Your browser does not support Canvas")
-    return;
-  }
-  const urlp = new URLSearchParams(window.location.search)
-  ctx.font - "Arial 100px"
-  ctx.fillText(urlp.get("text"),10,40)
-}    
-  window.onload = main();
-  </script>
+  <head>
+    <title>Requals' Cool Links</title>
+    <style>
+      a::after{
+        content: "("attr(href);")"
+        font-size: 25px;
+        
+      }
+      a{
+        font-size: 40px;
+        font-family: Sans-Serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.mathartfun.com/DiceLabDice.html">Weird Dice</a>
+  </body>
 </html>
