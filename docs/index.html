@@ -3,12 +3,20 @@
   <head>
     <title>Joe Biden</title>
     <style>
-    
-    
-    
+      #biden{
+        backface-visibility: visible;
+        transform: translateZ(50px) rotateY(var(--rotation));
+        animation 3s infinite rotatebiden
+      }
+      @keyframes rotatebiden {
+        from {--rotation: 0deg;}
+        to {--rotation: 360deg;}
+      }
     </style>
   </head>
   <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg" width="50px" height="50px"
+    <div>
+      <img id="biden" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg" width="50px" height="50px">
+    </div>
   </body>
 </html>
