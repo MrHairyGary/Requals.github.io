@@ -7,10 +7,11 @@
         backface-visibility: visible;
         transform: translateZ(50px) rotateY(0deg);
         animation: rotatebiden 2s infinite;
+        position: fixed;
       }
       @keyframes rotatebiden {
-        50% {rotateY(180deg);}
-        100% {rotateY(360deg);}
+        50% {transform: translateZ(50px) rotateY(180deg);}
+        100% {transform: translateZ(50px) rotateY(360deg);}
       }
     </style>
   </head>
