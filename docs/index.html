@@ -5,12 +5,12 @@
     <style>
       #biden{
         backface-visibility: visible;
-        transform: translateZ(50px) rotateY(var(--rotation));
-        animation: 3s infinite rotatebiden;
+        transform: translateZ(50px) rotateY(0deg);
+        animation: rotatebiden 2s infinite;
       }
       @keyframes rotatebiden {
-        from {--rotation: 0deg;}
-        to {--rotation: 360deg;}
+        50% {rotateY(180deg);}
+        100% {rotateY(360deg);}
       }
     </style>
   </head>
