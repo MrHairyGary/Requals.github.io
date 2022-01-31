@@ -8,16 +8,19 @@
         --column1shown: hidden;
         --column2shown: hidden;
         --column3shown: hidden;
-        --loadshown: visible;
+        --loadshown: block;
       }
       .game-column{
-        column-count: var(--jscolumncount)
+        column-count: var(--columncount);
       }
       .col-1{
+        display: var(--column1shown);
       }
       .col-2{
+        display: var(--column2shown);
       }
       .col-3{
+        display: var(--column3shown);
       }
     </style>
     <script>
@@ -35,7 +38,7 @@
         let colNum = 1;
         setCSSvar("--columncount",colNum)
         for(let i = 0;i<colNum;i++){
-          setCSSvar(`--column${i}shown`,"visible")
+          setCSSvar(`--column${i}shown`,"block")
         }
         setCSSvar("--loadshown","hidden")
       }
