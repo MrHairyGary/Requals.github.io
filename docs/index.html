@@ -30,18 +30,19 @@
       }
     </style>
     <script>
-      function setCSSVar(varname,varvalue) {
-        document.documentElement.style.setProperty(varname, varvalue);
+      function setCSSVar(varname,varvalue,cssclass) {
+        document.querySelector(`.${cssclass}`).style.setProperty(varname, varvalue);
         // MUST BE A STRING (unless passing number, units do not count!)
         return(varvalue)
       }
       function initiateGame() {
         let colNum = 1;
+        let cols = ["block","hidden","hidden"]
         setCSSvar("--columncount",colNum)
-        for(let i = 1;i<=colNum+1;i++){
-          setCSSvar(`--column${i-1}shown`,"block")
+        for(let i = 1;i<=3;i++){
+          setCSSvar("display",cols[i],`col-{i}`)
         }
-        setCSSvar("--loadshown","hidden")
+        
       }
       window.onload = initiateGame()
     </script>
