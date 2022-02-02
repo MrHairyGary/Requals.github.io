@@ -23,7 +23,9 @@
         display: none;
       }
     </style>
-    <script>
+  </head>
+  <body onload="initiateGame()">
+      <script>
       function setCSSVar(varname,varvalue,cssclass) {
         document.querySelector(`.${cssclass}`).style.setProperty(varname, varvalue);
         // MUST BE A STRING (unless passing number, units do not count!)
@@ -38,8 +40,6 @@
         } 
       }
     </script>
-  </head>
-  <body onload="initiateGame()">
     <div class="game">
       <div class="game-column">
         <div class="col-1">test</div>
