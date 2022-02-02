@@ -13,28 +13,28 @@
         column-rule: thick solid black;
       }
       .col-1{
-        display: var(--column1shown);
+        display: none;
         color: var(--colortest);
       }
       .col-2{
-        display: var(--column2shown);
+        display: none;
       }
       .col-3{
-        display: var(--column3shown);
+        display: none;
       }
     </style>
     <script>
       function setCSSVar(varname,varvalue,cssclass) {
         document.querySelector(`.${cssclass}`).style.setProperty(varname, varvalue);
         // MUST BE A STRING (unless passing number, units do not count!)
-        return(varvalue)
+        return(varvalue);
       }
       function initiateGame() {
         let colNum = 1;
-        let cols = ["block","none","none"]
-        setCSSvar("--columncount",colNum)
+        let cols = ["block","none","none"];
+        setCSSvar("--columncount",colNum);
         for(let i = 1;i<=3;i++){
-          setCSSvar("display",cols[i],`col-{i}`)
+          setCSSvar("display",cols[i],`col-{i}`);
         } 
       }
     </script>
