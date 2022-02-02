@@ -41,13 +41,11 @@
         setCSSvar("--columncount",colNum)
         for(let i = 1;i<=3;i++){
           setCSSvar("display",cols[i],`col-{i}`)
-        }
-        
+        } 
       }
-      window.onload = initiateGame()
     </script>
   </head>
-  <body>
+  <body onload="initiateGame()">
     <div class="game">
       <div class="game-column">
         <div class="col-1">test</div>
