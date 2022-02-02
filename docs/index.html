@@ -4,6 +4,9 @@
     <title>Finite Fencing</title>
     <style>
       :root{
+        /*
+        Main variables in CSS
+        */
         --columncount: 1;
         --column1shown: hidden;
         --column2shown: hidden;
@@ -40,12 +43,12 @@
       function initiateGame() {
         let colNum = 1;
         setCSSvar("--columncount",colNum)
-        for(let i = 0;i<colNum;i++){
-          setCSSvar(`--column${i}shown`,"block")
+        for(let i = 1;i<=colNum+1;i++){
+          setCSSvar(`--column${i-1}shown`,"block")
         }
         setCSSvar("--loadshown","hidden")
       }
-      initiateGame()
+      window.onload() = initiateGame()
     </script>
   </head>
   <body>
