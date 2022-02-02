@@ -37,7 +37,7 @@
       }
       function initiateGame() {
         let colNum = 1;
-        let cols = ["block","hidden","hidden"]
+        let cols = ["block","none","none"]
         setCSSvar("--columncount",colNum)
         for(let i = 1;i<=3;i++){
           setCSSvar("display",cols[i],`col-{i}`)
