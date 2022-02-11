@@ -90,28 +90,28 @@
 var localx = 0;
 var localy = 0;
 function transform(o) {
- z = divide(o,new complex(40,0))
- returnRA = divide(tan(z),power(z,z))
- return returnRA
+ z = divide(o,new complex(40,0));
+ returnRA = divide(tan(z),power(z,z));
+ return returnRA;
 }
 function up() {
  localy = localy + 50;
- update()
+ update();
 }
 function left() {
  localx = localx - 50;
- update()
+ update();
 }
 function right() {
  localx = localx + 50;
- update()
+ update();
 }
 function down() {
  localy = localy - 50;
- update()
+ update();
 }
 function clamp(value,min,max) {
- return Math.min(max,Math.max(value,min))
+ return Math.min(max,Math.max(value,min));
 }
 function update() {
 var fractal = document.getElementById("mandelbrot")
@@ -119,13 +119,13 @@ var ctx = fractal.getContext("2d")
 ctx.clearRect(0,0,500,500)
 for (let x = 0; x < 500; x++) {
  for (let y = 0; y < 500; y++) {
-  let pointa = new complex(x-250-localx,y-250-localy)
-  let point = transform(pointa)
-  ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${0+clamp((50*modular(point)),0,50)}%)`
-  ctx.fillRect(x,y,1,1) 
+  let pointa = new complex(x-250-localx,y-250-localy);
+  let point = transform(pointa);
+  ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${0+clamp((50*modular(point)),0,50)}%)`;
+  ctx.fillRect(x,y,1,1);
  }
 }
-document.getElementById("test").href = fractal.toDataURL('image/png')
+document.getElementById("test").href = fractal.toDataURL('image/png');
 }
 </script>
 </body>
