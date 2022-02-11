@@ -3,8 +3,8 @@
 <head>
  <title>J</title>
 <script data-type="complexfunctions">
-  let localx = 0;
-  let localy = 0;
+  localx = 0;
+  localy = 0;
   class complex {
     constructor(r,i) {
       this.r = r
@@ -89,8 +89,8 @@
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
 <script>
-let localx = 0;
-let localy = 0;
+localx = 0;
+localy = 0;
 function transform(o) {
  z = divide(o,new complex(40,0));
  returnRA = divide(tan(z),power(z,z));
@@ -118,15 +118,15 @@ function up() {
  update();
 }
 function left() {
- let localx = localx - 50;
+ localx = localx - 50;
  update();
 }
 function right() {
- let localx = localx + 50;
+ localx = localx + 50;
  update();
 }
 function down() {
- let localy = localy - 50;
+ localy = localy - 50;
  update();
 }
 </script>
