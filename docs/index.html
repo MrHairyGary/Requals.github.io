@@ -96,15 +96,19 @@ function transform(o) {
 }
 function up() {
  localy = localy + 50;
+ update()
 }
 function left() {
  localy = localx - 50;
+ update()
 }
 function right() {
  localy = localx + 50;
+ update()
 }
 function down() {
  localy = localy - 50;
+ update()
 }
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min))
