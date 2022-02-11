@@ -79,7 +79,7 @@
 <script>
 function transform(o) {
  z = divide(o,new complex(40,0))
- returnRA = power(cos(z),sin(z))
+ returnRA = divide(tan(z),power(z,z))
  return returnRA
 }
 function clamp(value,min,max) {
