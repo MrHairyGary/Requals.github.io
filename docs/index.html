@@ -109,6 +109,8 @@ for (let x = 0; x < 500; x++) {
   ctx.fillRect(x,y,1,1);
  }
 }
+document.getElementById("test").href = fractal.toDataURL('image/png');
+}
 function up() {
  var localy = localy + 50;
  update();
@@ -124,8 +126,6 @@ function right() {
 function down() {
  var localy = localy - 50;
  update();
-}
-document.getElementById("test").href = fractal.toDataURL('image/png');
 }
 </script>
 </body>
