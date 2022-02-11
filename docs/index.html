@@ -94,22 +94,6 @@ function transform(o) {
  returnRA = divide(tan(z),power(z,z));
  return returnRA;
 }
-function up() {
- localy = localy + 50;
- update();
-}
-function left() {
- localx = localx - 50;
- update();
-}
-function right() {
- localx = localx + 50;
- update();
-}
-function down() {
- localy = localy - 50;
- update();
-}
 function clamp(value,min,max) {
  return Math.min(max,Math.max(value,min));
 }
@@ -124,6 +108,22 @@ for (let x = 0; x < 500; x++) {
   ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${0+clamp((50*modular(point)),0,50)}%)`;
   ctx.fillRect(x,y,1,1);
  }
+}
+function up() {
+ var localy = localy + 50;
+ update();
+}
+function left() {
+ var localx = localx - 50;
+ update();
+}
+function right() {
+ var localx = localx + 50;
+ update();
+}
+function down() {
+ var localy = localy - 50;
+ update();
 }
 document.getElementById("test").href = fractal.toDataURL('image/png');
 }
