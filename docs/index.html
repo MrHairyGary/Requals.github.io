@@ -81,7 +81,9 @@
   <button onclick="up()">^</button><br>
   <button onclick="left()">&lt;</button>
   <button onclick="right()">&gt;</button><br>
-  <button onclick="down()">v</button>
+  <button onclick="down()">v</button><br>
+  <button onclick="zoomf(0.5)">-</button>
+  <button onclick="zoomf(2)">+</button>
  </div>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
@@ -126,6 +128,9 @@ function right() {
 function down() {
  localy = localy + 50;
  update();
+}
+function zoomf(amount) {
+ zooming = zooming * amount;
 }
 </script>
 </body>
