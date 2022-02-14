@@ -89,7 +89,7 @@ localx = 0;
 localy = 0;
 function transform(o) {
  z = divide(o,new complex(40,0));
- returnRA = divide(power(cos(z),z),add(sin(z),tan(z)));
+ returnRA = sin(tan(z));
  return returnRA;
 }
 function clamp(value,min,max) {
