@@ -5,6 +5,7 @@
 <script data-type="complexfunctions">
   localx = 0;
   localy = 0;
+  zooming = 1;
   class complex {
     constructor(r,i) {
       this.r = r
@@ -84,11 +85,12 @@
  </div>
 <br>
 <canvas class="center-canvas" id="mandelbrot" width="500" height="500"></canvas>
-<script>
+<script data-type="rendering">
 localx = 0;
 localy = 0;
+zooming = 1;
 function transform(o) {
- z = divide(o,new complex(40,0));
+ z = divide(o,new complex(40*zooming,0));
  returnRA = sin(tan(z));
  return returnRA;
 }
