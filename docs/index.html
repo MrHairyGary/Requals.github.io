@@ -118,7 +118,7 @@ for (let x = 0; x < 500; x++) {
   ctx.fillStyle = `HSL(${(((360/(2*Math.PI))*Math.atan2(point.i,point.r)))%360},100%,${0+clamp((50*modular(point)),0,50)}%)`;
   ctx.fillRect(x,y,1,1);
   document.getElementById("x").innerHTML = localx;
-  document.getElementById("y").innerHTML = localy;
+  document.getElementById("y").innerHTML = -localy;
  }
 }
 document.getElementById("test").href = fractal.toDataURL('image/png');
