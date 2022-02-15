@@ -100,7 +100,7 @@ localx = 0;
 localy = 0;
 zooming = 1;
 function transform(o) {
- z = add(divide(o,new complex(40*zooming,0)),new complex(-localx,-localy));
+ z = add(divide(o,new complex(40*zooming,0)),new complex(-localx,localy/5));
  returnRA = sin(tan(z));
  return returnRA;
 }
