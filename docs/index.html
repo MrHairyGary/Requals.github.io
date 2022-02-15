@@ -100,7 +100,7 @@ localx = 0;
 localy = 0;
 zooming = 1;
 function transform(o) {
- z = add(divide(o,new complex(40*zooming,0)),new complex(-localx,localy/50));
+ z = add(divide(o,new complex(40*zooming,0)),new complex(-localx,localy/400));
  returnRA = sin(tan(z));
  return returnRA;
 }
@@ -128,11 +128,11 @@ function up() {
  update();
 }
 function left() {
- localx = localx - 50/zooming;
+ localx = localx - 200/zooming;
  update();
 }
 function right() {
- localx = localx + 50/zooming;
+ localx = localx + 200/zooming;
  update();
 }
 function down() {
