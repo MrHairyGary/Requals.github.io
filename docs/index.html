@@ -95,7 +95,7 @@ localx = 0;
 localy = 0;
 zooming = 1;
 function transform(o) {
- z = add(divide(o,new complex(40*zooming,0)),new complex(localx,localy));
+ z = add(divide(o,new complex(40*zooming,0)),new complex(-localx,-localy));
  returnRA = sin(tan(z));
  return returnRA;
 }
@@ -117,19 +117,19 @@ for (let x = 0; x < 500; x++) {
 document.getElementById("test").href = fractal.toDataURL('image/png');
 }
 function up() {
- localy = localy - 50;
+ localy = localy - 50/zooming;
  update();
 }
 function left() {
- localx = localx - 50;
+ localx = localx - 50/zooming;
  update();
 }
 function right() {
- localx = localx + 50;
+ localx = localx + 50/zooming;
  update();
 }
 function down() {
- localy = localy + 50;
+ localy = localy + 50/zooming;
  update();
 }
 function zoomf(amount) {
