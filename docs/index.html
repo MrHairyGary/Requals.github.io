@@ -6,20 +6,6 @@
  </head>
  <body>
   <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-  <canvas class="glslCanvas" data-fragment="
-#ifdef GL_ES
-precision mediump float;
-#endif
-                                            
-uniform vec2 u_mouse;
-uniform vec2 u_resolution;
-uniform float u_time;
-
-void main() {
-  nc = gl_FragCoord.xy/u_resolution;
-  gl_FragColor = vec4(sin(nc.x)+cos(nc.y+u_time),0.0,0.0,1.0);
-}
-" 
-width="500" height="500"></canvas>
+  <canvas class="glslCanvas" data-fragment-url="t.frag" width="500" height="500"></canvas>
  </body>
 </html>
