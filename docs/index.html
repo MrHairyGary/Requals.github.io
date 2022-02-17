@@ -2,17 +2,20 @@
 <html>
  <head>
   <style>
-   canvas {
-    position: fixed;
-    padding: 0;
-    display: block;
-    margin: auto;
-    width: 500px;
-   }
   </style>
  </head>
  <body>
   <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-  <canvas class="glslCanvas" data-fragment-url="domain.frag" width="500" height="500"></canvas>
+  <canvas class="glslCanvas" data-fragment="
+precision mediump float;
+uniform vec2 mouse;
+uniform vec2 resolution;
+uniform float time;
+
+void main() {
+  nc = gl_FragCoord.xy/resolution
+  gl_FragColor = sin(nc.x)+cos(nc.y+time)
+}" 
+width="500" height="500"></canvas>
  </body>
 </html>
