@@ -7,7 +7,9 @@
  <body>
   <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
   <canvas class="glslCanvas" data-fragment="
+#ifdef GL_ES
 precision mediump float;
+#endif
                                             
 uniform vec2 mouse;
 uniform vec2 resolution;
