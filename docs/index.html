@@ -17,7 +17,7 @@ uniform float time;
 
 void main() {
   nc = gl_FragCoord.xy/resolution;
-  gl_FragColor = sin(nc.x)+cos(nc.y+time);
+  gl_FragColor = vec4(sin(nc.x)+cos(nc.y+time),0.0,0.0,1.0);
 }
 " 
 width="500" height="500"></canvas>
