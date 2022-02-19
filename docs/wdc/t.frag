@@ -22,10 +22,12 @@ void main()
   vec2 nc = gl_FragCoord.xy/u_resolution;
   vec2 ac = nc;
   float hue = 0.0;
-  for(int j = 1;j < 30;j = j + 1) {
+  for (int j = 1; j < 30; j += 1) {
     ac = mandelbrot(ac,nc);
     if(pow(ac.x,2.0)+pow(ac.y,2.0) > 4.0) {
       hue = hue + 2.0;
+    } else {
+      continue;
     }
   }
   gl_FragColor = vec4(hsv2rgb(vec3(hue,1.0,1.0)),1.0);
