@@ -24,7 +24,7 @@ void main()
   float hue = 0.0;
   for(int iter = 0;iter < 30;iter =+ 1) {
     ac = mandelbrot(ac,nc);
-    if(pow(ac.x,2.0)+pow(ac.y,2.0) > 4) {
+    if(pow(ac.x,2.0)+pow(ac.y,2.0) > 4.0) {
       hue = hue + 1.0;
     }
   }
