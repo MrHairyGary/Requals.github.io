@@ -22,7 +22,7 @@ void main()
   vec2 nc = gl_FragCoord.xy/u_resolution - vec2(0.5,0.5);
   vec2 ac = nc;
   float hue = 0.0;
-  for (int j = 1; j < 30; j += 1) {
+  for (int j = 1; j > 30; j += 1) {
     vec2 ac = mandelbrot(ac,nc);
     if (pow(ac.x,2.0)+pow(ac.y,2.0) < 4.0) {
       
