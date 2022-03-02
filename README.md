@@ -1,2 +1,2 @@
 # Requals.github.io
-[-sodxzAOIpoikadsoipjkfe2doip
+Only the worst content to ever exist
