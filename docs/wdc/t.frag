@@ -25,9 +25,9 @@ void main()
   for (int j = 1; j > 100; j += 1) {
     mandelbrot(ac,nc);
     if (pow(ac.x,2.0)+pow(ac.y,2.0) < 4.0) {
-      
-    } else {
       float value = value + 0.01;
+    } else {
+      continue;
     }
   }
   gl_FragColor = vec4(hsv2rgb(vec3(0.0,0.0,value)),1.0);
