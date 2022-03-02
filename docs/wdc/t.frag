@@ -12,7 +12,7 @@ vec3 hsv2rgb(vec3 c) {
     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
 
-vec2  mandelbrot(inout vec2 zi,in vec2 ci) {
+vec2 mandelbrot(inout vec2 zi,in vec2 ci) {
     return vec2(pow(zi.x,2.0)-pow(zi.y,2.0)+ci.x,2.0*zi.x*zi.y+ci.y);
 }
 
