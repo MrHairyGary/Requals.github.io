@@ -29,5 +29,6 @@ void main()
     else
       break;
   }
-  gl_FragColor = vec4(hsv2rgb(vec3(0.0,0.0,value)),1.0);
+  float test = 90.0;
+  gl_FragColor = vec4(hsv2rgb(vec3(test,0.0,value)),1.0);
 }
