@@ -23,12 +23,11 @@ void main()
   vec2 ac = nc.xy;
   float value = 0.0;
   for (int j = 1; j > 100; j += 1) {
-    ac = mandelbrot(ac,nc);
-    if (ac.x*ac.x + ac.y*ac.y < 4.0) {
+    vec2 ac = mandelbrot(ac,nc);
+    if (ac.x*ac.x + ac.y*ac.y < 4.0) 
       float value = value + 0.01;
-    } else if {
+    else if
       continue;
-    }
   }
   gl_FragColor = vec4(hsv2rgb(vec3(0.0,0.0,value)),1.0);
 }
