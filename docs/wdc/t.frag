@@ -13,7 +13,7 @@ vec3 hsv2rgb(vec3 c) {
 }
 
 vec2 mandelbrot(inout vec2 zi,in vec2 ci) {
-    return vec2(pow(zi.x,2.0)-pow(zi.y,2.0)+ci.x,2.0*zi.x*zi.y+ci.y);
+    return vec2((zi.x*zi.x)-(zi.y*zi.y)+ci.x,2.0*zi.x*zi.y+ci.y);
 }
 
 
@@ -24,7 +24,7 @@ void main()
   float value = 0.0;
   for (int j = 1; j > 100; j += 1) {
     mandelbrot(ac,nc);
-    if (pow(ac.x,2.0)+pow(ac.y,2.0) < 4.0) {
+    if (ac.x*ac.x + ac.y*ac.y < 4.0) {
       float value = value + 0.01;
     } else {
       continue;
