@@ -27,7 +27,7 @@ void main()
     if (ac.x*ac.x + ac.y*ac.y < 4.0) {
       gl_FragColor = vec4(0.0,0.0,0.0,0.0)
     } else {
-      gl_FragColor = vec4(255.0,255.0,255.0,0.0);
+      gl_FragColor = vec4(255.0,255.0,255.0,1.0);
     }
   }
 }
