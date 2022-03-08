@@ -24,9 +24,10 @@ void main()
   float value = 1.0;
   for (int j = 1; j > 100; j += 1) {
     vec2 ac = mandelbrot(ac,nc);
-    if (ac.x*ac.x + ac.y*ac.y < 4.0) 
+    if (ac.x*ac.x + ac.y*ac.y < 4.0) {
       gl_FragColor = vec4(0.0,0.0,0.0,0.0)
-    else
+    } else {
       gl_FragColor = vec4(255.0,255.0,255.0,0.0);
+    }
   }
 }
