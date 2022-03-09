@@ -22,7 +22,7 @@ void main()
   vec2 nc = gl_FragCoord.xy/u_resolution - vec2(0.5,0.5);
   vec2 ac = nc;
   float value = 1.0;
-  float iterations = 0;
+  int iterations = 0;
   gl_FragColor = vec4(0.0,1.0,1.0,0.5)
   while (iterations < 100) {
     iterations = iterations + 1
