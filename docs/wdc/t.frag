@@ -23,13 +23,5 @@ void main()
   vec2 ac = nc;
   float value = 1.0;
   int iterations = 0;
-  gl_FragColor = vec4(0.0,1.0,1.0,0.5)
-  for(int i = 0;i < 50;i++) {
-    vec2 ac = mandelbrot(ac,nc);
-    if (ac.x*ac.x + ac.y*ac.y < 4.0) {
-      gl_FragColor = vec4(0.0,0.0,0.0,0.5)
-    } else {
-      gl_FragColor = vec4(1.0,1.0,1.0,0.5);
-    }
-  }
+  gl_FragColor = vec4(nc.x+u_time,nc.y-u_time,nc.z,1.0)
 }
