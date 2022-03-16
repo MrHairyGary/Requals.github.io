@@ -19,7 +19,7 @@ vec2 mandelbrot(inout vec2 zi,in vec2 ci) {
 
 void main() 
 {
-  vec2 nc = gl_FragCoord.xy/u_resolution - vec2(0.5,0.5);
+  vec2 nc = gl_FragCoord.xy/u_resolution;
   vec2 ac = nc;
   float value = 1.0;
   int iterations = 0;
