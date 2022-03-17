@@ -7,10 +7,8 @@ uniform vec2 u_resolution;
 uniform float u_time;
 
 float isgttwo(in float t){
-  return (sign(t-2.0)+1.0)/2.0
+  return (sign(t-2.0)+1.0)/2.0)
 }
-
-
 void main() {
   vec2 nc = gl_FragCoord.xy/u_resolution;
   gl_FragColor = vec4(0.0,0.0,0.0,isgttwo(nc.x*4.0));
