@@ -6,8 +6,8 @@ uniform vec2 u_mouse;
 uniform vec2 u_resolution;
 uniform float u_time;
 
-float isgttwo(t){
-  return (sign(t-2)+1)/2
+void isgttwo(in float t){
+  return (sign(t-2.0)+1.0)/2.0
 }
 
 
