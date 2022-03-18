@@ -14,7 +14,7 @@ vec4 m(in vec4 t) {
   return vec4(t.x*t.x-t.y*t.y+t.z,t.y*t.x*2.0+t.w,t.z,t.w);
 }
 
-vec2 getdist(in vec4 t,out float o) {
+float getdist(in vec4 t,out float o) {
   return t.x*t.x + t.y*t.y;
 }
 
