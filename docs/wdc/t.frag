@@ -14,11 +14,11 @@ vec4 m(in vec4 t) {
   return vec4(t.x*t.x-t.y*t.y+t.z,t.y*t.x*2.0+t.w,t.z,t.w);
 }
 
-float getdist(in vec4 t,out float o) {
-  return t.x*t.x + t.y*t.y;
+vec4 getdist(in vec4 t,out float o) {
+  return t.x*t.x+t.y*t.y;
 }
 
 void main() {
   vec2 nc = gl_FragCoord.xy/u_resolution;
-  gl_FragColor = vec4(0.0,0.0,0.0,isgtf(getdist(m(vec4(nc.xyxy)))*4.0));
+  gl_FragColor = vec4(0.0,0.0,0.0,isgtf(getdist(m(nc.xyxy))));
 }
