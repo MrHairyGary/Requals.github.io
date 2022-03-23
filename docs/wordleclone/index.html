@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You are not clever for looking in Inspect Element
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <html>
  <head>
   <style>
@@ -65,7 +70,11 @@
     <div class="f">A</div>
    </div>
    <script>
-     
+     const letters = document.querySelectorAll(".f")
+     for(let letter = 0;letter < letters.length;letter++) {
+      letters[letter].innerhtml = "_"
+     }
+     console.log("Fake hacker or just debugging?")
    </script>
  </body>
 </html>
