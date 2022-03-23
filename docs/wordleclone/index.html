@@ -6,6 +6,7 @@ You are not clever for looking in Inspect Element
 
 <html>
  <head>
+  <title>Testing</title>
   <style>
     h1, p{
      font-family: sans-serif;
@@ -32,14 +33,16 @@ You are not clever for looking in Inspect Element
     }
   </style>
   <script>
-   const letters = document.querySelectorAll(".f")
-   for(let letter = 0;letter < letters.length;letter++) {
-    letters[letter].innerHTML = "_"
+   function load(){
+     const letters = document.querySelectorAll(".f")
+     for(let letter = 0;letter < letters.length;letter++) {
+      letters[letter].innerHTML = "_"
+     }
+    console.log("Fake hacker or just debugging?")
    }
-   console.log("Fake hacker or just debugging?")
   </script>
  </head>
- <body>
+ <body onload="load()">
   <noscript>
    <h1>Please allow Javascript on this page!</h1>
   </noscript>
