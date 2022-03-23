@@ -1,2 +1,2 @@
-# Requals.github.io
-Only the worst content to ever exist
+# My website(s).
+Really bad web design and programming practices.
