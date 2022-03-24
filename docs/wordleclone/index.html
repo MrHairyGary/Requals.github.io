@@ -34,15 +34,17 @@ You are not clever for looking in Inspect Element
   </style>
   <script>
    function load(){
-     var typedCharacters = ["_","_","_","_","_"];
-     var charNumber = 0;
-     var letters = document.querySelectorAll(".f");
-     var charNumber = 0;
      for(let letter = 0;letter < letters.length;letter++) {
       letters[letter].innerHTML = "_";
      }
      console.log("Fake hacker or just debugging/peering through my code?");
    }
+  </script>
+  <script>
+   var typedCharacters = ["_","_","_","_","_"];
+   var charNumber = 0;
+   var letters = document.querySelectorAll(".f");
+   var charNumber = 0;
   </script>
   <script>
    document.addEventListener("keydown",function a() {
