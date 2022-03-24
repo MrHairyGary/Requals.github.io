@@ -35,7 +35,6 @@ You are not clever for looking in Inspect Element
   <script>
    function load(){
      let typedCharacters = ["_","_","_","_","_"]
-     let charNumber = 0;
      const letters = document.querySelectorAll(".f")
      for(let letter = 0;letter < letters.length;letter++) {
       letters[letter].innerHTML = "_"
@@ -44,6 +43,7 @@ You are not clever for looking in Inspect Element
    }
   </script>
   <script>
+   let charNumber = 0;
    document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
      typedCharacters[charNumber] = event.key.toUppercase()
