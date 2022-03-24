@@ -34,21 +34,22 @@ You are not clever for looking in Inspect Element
   </style>
   <script>
    function load(){
-     let typedCharacters = ["_","_","_","_","_"]
-     const letters = document.querySelectorAll(".f")
+     var typedCharacters = ["_","_","_","_","_"];
+     var charNumber = 0;
+     var letters = document.querySelectorAll(".f");
+     var charNumber = 0;
      for(let letter = 0;letter < letters.length;letter++) {
-      letters[letter].innerHTML = "_"
+      letters[letter].innerHTML = "_";
      }
-     console.log("Fake hacker or just debugging?")
+     console.log("Fake hacker or just debugging/peering through my code?");
    }
   </script>
   <script>
-   let charNumber = 0;
    document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
-     typedCharacters[charNumber] = event.key.toUppercase()
+     typedCharacters[charNumber] = event.key.toUppercase();
      charNumber = charNumber + 1;
-     console.log(event.key)
+     console.log(event.key);
     }
    })
   </script>
