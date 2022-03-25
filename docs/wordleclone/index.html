@@ -44,15 +44,15 @@ You are not clever for looking in Inspect Element
    charNumber = 0;
    letters = document.querySelectorAll(".flex-container > div");
    function load(){
-    for(let letter = 0;letter < letters.length;letter++) {
-     letters[letter].innerHTML = "_";
+    for (let i = 0;i < letters.length;i++) {
+     letters[i].innerHTML = "_";
     }
     console.log("Fake hacker or just debugging/peering through my code?");
    }
   </script>
   <script>
    document.addEventListener("keydown",function a() {
-    if(charNumber < 5) {
+    if(charNumber < 4) {
      typedCharacters[charNumber] = event.key.toUpperCase();
      letters[charNumber].innerHTML = typedCharacters[charNumber]
      charNumber = charNumber + 1;
