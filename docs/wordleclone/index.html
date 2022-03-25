@@ -49,7 +49,7 @@ You are not clever for looking in Inspect Element
     }
     console.log("Fake hacker or just debugging/peering through my code?");
    }
-   .addEventListener("keydown",function a() {
+   document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
      typedCharacters[charNumber] = event.key.toUppercase();
      letters[charNumber].innerHTML = typedCharacters[charNumber]
