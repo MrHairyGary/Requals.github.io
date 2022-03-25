@@ -40,6 +40,9 @@ You are not clever for looking in Inspect Element
     }
   </style>
   <script>
+   window.typedCharacters = ["_","_","_","_","_"];
+   window.charNumber = 0;
+   window.letters = document.querySelectorAll(".f");
    function load(){
     window.typedCharacters = ["_","_","_","_","_"];
     window.charNumber = 0;
@@ -49,9 +52,7 @@ You are not clever for looking in Inspect Element
     }
     console.log("Fake hacker or just debugging/peering through my code?");
    }
-  </script>
-  <script>
-   document.addEventListener("keydown",function a() {
+   .addEventListener("keydown",function a() {
     if(window.charNumber < 5) {
      typedCharacters[window.charNumber] = event.key.toUppercase();
      window.letters[window.charNumber].innerHTML = window.typedCharacters[window.charNumber]
@@ -62,6 +63,11 @@ You are not clever for looking in Inspect Element
   </script>
  </head>
  <body onload="load()">
+  <script>
+   window.typedCharacters = ["_","_","_","_","_"];
+   window.charNumber = 0;
+   window.letters = document.querySelectorAll(".f");
+  </script>
   <noscript>
    <h1>Please allow Javascript on this page!</h1>
   </noscript>
