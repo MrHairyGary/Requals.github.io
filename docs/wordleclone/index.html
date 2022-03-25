@@ -40,15 +40,15 @@ You are not clever for looking in Inspect Element
     }
   </style>
   <script>
-   window.typedCharacters = ["_","_","_","_","_"];
-   window.charNumber = 0;
-   window.letters = document.querySelectorAll(".f");
-   window.charNumber = 0;
    function load(){
-     for(let letter = 0;letter < window.letters.length;letter++) {
-      window.letters[letter].innerHTML = "_";
-     }
-     console.log("Fake hacker or just debugging/peering through my code?");
+    window.typedCharacters = ["_","_","_","_","_"];
+    window.charNumber = 0;
+    window.letters = document.querySelectorAll(".f");
+    window.charNumber = 0;
+    for(let letter = 0;letter < window.letters.length;letter++) {
+     window.letters[letter].innerHTML = "_";
+    }
+    console.log("Fake hacker or just debugging/peering through my code?");
    }
   </script>
   <script>
