@@ -40,20 +40,20 @@ You are not clever for looking in Inspect Element
     }
   </style>
   <script>
-   window.typedCharacters = ["_","_","_","_","_"];
-   window.charNumber = 0;
-   window.letters = document.querySelectorAll(".f");
+   typedCharacters = ["_","_","_","_","_"];
+   charNumber = 0;
+   letters = document.querySelectorAll(".f");
    function load(){
-    for(let letter = 0;letter < window.letters.length;letter++) {
-     window.letters[letter].innerHTML = "_";
+    for(let letter = 0;letter < letters.length;letter++) {
+     letters[letter].innerHTML = "_";
     }
     console.log("Fake hacker or just debugging/peering through my code?");
    }
    .addEventListener("keydown",function a() {
-    if(window.charNumber < 5) {
-     typedCharacters[window.charNumber] = event.key.toUppercase();
-     window.letters[window.charNumber].innerHTML = window.typedCharacters[window.charNumber]
-     window.charNumber = window.charNumber + 1;
+    if(charNumber < 5) {
+     typedCharacters[charNumber] = event.key.toUppercase();
+     letters[charNumber].innerHTML = typedCharacters[charNumber]
+     charNumber = charNumber + 1;
      console.log(event.key);
     }
    })
@@ -61,9 +61,9 @@ You are not clever for looking in Inspect Element
  </head>
  <body onload="load()">
   <script>
-   window.typedCharacters = ["_","_","_","_","_"];
-   window.charNumber = 0;
-   window.letters = document.querySelectorAll(".f");
+   typedCharacters = ["_","_","_","_","_"];
+   charNumber = 0;
+   letters = document.querySelectorAll(".f");
   </script>
   <noscript>
    <h1>Please allow Javascript on this page!</h1>
