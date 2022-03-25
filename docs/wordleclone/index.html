@@ -54,8 +54,8 @@ You are not clever for looking in Inspect Element
    document.addEventListener("keydown",function a() {
     if(window.charNumber < 5) {
      typedCharacters[window.charNumber] = event.key.toUppercase();
-     window.charNumber = window.charNumber + 1;
      window.letters[window.charNumber].innerHTML = window.typedCharacters[window.charNumber]
+     window.charNumber = window.charNumber + 1;
      console.log(event.key);
     }
    })
