@@ -42,6 +42,7 @@ You are not clever or funny for looking in Inspect Element
   <script>
    typedCharacters = ["_","_","_","_","_"];
    charNumber = 0;
+   rowNumber = 0;
    function load(){
     document.querySelectorAll(".flex-container > div").forEach(function(letter) {
      letter.innerHTML = "_"
@@ -52,10 +53,13 @@ You are not clever or funny for looking in Inspect Element
    document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
      typedCharacters[charNumber] = event.key.toUpperCase();
-     document.querySelectorAll(".flex-container > div")[charNumber].innerHTML = typedCharacters[charNumber]
+     document.querySelectorAll(".flex-container > div")[charNumber+5*rowNumber].innerHTML = typedCharacters[charNumber+5*rowNumber]
      charNumber = charNumber + 1;
      console.log(event.key);
-    }
+    } else if(event.key == "enter"){
+     charNumber = 0;
+     rowNumber = rowNumber + 1;
+    } 
    })
   </script>
  </head>
