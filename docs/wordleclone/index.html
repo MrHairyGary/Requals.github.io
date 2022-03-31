@@ -52,13 +52,26 @@ You are not clever or funny for looking in Inspect Element
   <script>
    document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
-     typedCharacters[charNumber] = event.key.toUpperCase();
-     document.querySelectorAll(".flex-container > div")[charNumber+5*rowNumber].innerHTML = typedCharacters[charNumber+5*rowNumber]
-     charNumber = charNumber + 1;
-     console.log(event.key);
-    } else if(event.key == "enter"){
-     charNumber = 0;
-     rowNumber = rowNumber + 1;
+     if(/[a-z]+?/.test(event.key)) {
+      typedCharacters[charNumber] = event.key.toUpperCase();
+      document.querySelectorAll(".flex-container > div")[charNumber+5*rowNumber].innerHTML = typedCharacters[charNumber+5*rowNumber]
+      charNumber = charNumber + 1;
+      console.log(event.key);
+     }
+    } else {
+     switch(event.key){
+      case "Enter":
+       if(rowNumber < 5) {
+        charNumber = 0;
+        rowNumber = rowNumber + 1;
+       }
+       break;
+      case "Backspace":
+      if(charNumber > -1) {
+       typedCharacters[charNumber-1] = "_";
+       charNumber = charNumber - 1;
+      }
+     }
     } 
    })
   </script>
