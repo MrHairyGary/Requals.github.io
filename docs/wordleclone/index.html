@@ -59,8 +59,7 @@ You are not clever or funny for looking in Inspect Element
        charNumber = charNumber + 1;
        console.log(event.key);
       } 
-     }
-    } else {
+     } else {
      switch(event.key){
       case "Enter":
        if(rowNumber < 5) {
@@ -78,6 +77,7 @@ You are not clever or funny for looking in Inspect Element
        document.querySelector("#debug").innerHTML = typedCharacters.toString() + charNumber.toString(); 
        break;
      }
+    } 
     } 
    })
   </script>
