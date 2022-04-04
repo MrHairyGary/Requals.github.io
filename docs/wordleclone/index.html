@@ -72,6 +72,7 @@ You are not clever or funny for looking in Inspect Element
       case "Backspace":
        if(charNumber >= 0) {
         typedCharacters[Math.max(0,charNumber-1)] = "_";
+        document.querySelector("#debug").innerHTML = typedCharacters.toString();
         charNumber = Math.max(0,charNumber - 1);
         document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
         break;
@@ -88,6 +89,7 @@ You are not clever or funny for looking in Inspect Element
   </noscript>
    <p>Bad Wordle Clone<p>
    <div class="spacer"></div>
+   <div id="debug">Debug</div>
    <div class="flex-container">
     <div>B</div>
     <div>A</div>
