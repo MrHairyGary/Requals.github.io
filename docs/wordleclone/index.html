@@ -72,7 +72,8 @@ You are not clever or funny for looking in Inspect Element
       case "Backspace":
        if(charNumber >= 0) {
         typedCharacters[charNumber-1] = "_";
-        charNumber = charNumber - 1;
+        charNumber = Math.max(0,charNumber - 1);
+        document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
         break;
        }
        break;
