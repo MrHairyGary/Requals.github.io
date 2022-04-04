@@ -51,6 +51,7 @@ You are not clever or funny for looking in Inspect Element
   </script>
   <script>
    document.addEventListener("keydown",function a() {
+    document.write(event.key)
     if(charNumber < 5) {
      if(/^.$/.test(event.key)) {
       if(/[a-z]/.test(event.key)) {
@@ -70,11 +71,11 @@ You are not clever or funny for looking in Inspect Element
        }
        break;
       case "Backspace":
-      if(charNumber > -1) {
-       typedCharacters[charNumber-1] = "_";
-       charNumber = charNumber - 1;
-       break;
-      }
+       if(charNumber >= 0) {
+        typedCharacters[charNumber-1] = "_";
+        charNumber = charNumber - 1;
+        break;
+       }
      }
     } 
    })
