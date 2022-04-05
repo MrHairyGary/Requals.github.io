@@ -45,7 +45,7 @@ You are not clever or funny for looking in Inspect Element
    rowNumber = 0;
    function load(){
     document.querySelectorAll(".flex-container > div").forEach(function(letter) {
-     letter.innerHTML = "_"
+     letter.innerHTML = "_";
     })
    }
   </script>
@@ -62,7 +62,7 @@ You are not clever or funny for looking in Inspect Element
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
-      document.querySelectorAll("flex-container > div").slice(0,(rowNumber*5)-1).forEach(function(letter){
+      document.querySelectorAll("flex-container > div").slice(rowNumber*5,(rowNumber*5)+4).forEach(function(letter){
        letter.style.backgroundColor = "#CCCCCC";
       })
       charNumber = 0;
