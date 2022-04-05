@@ -62,8 +62,8 @@ You are not clever or funny for looking in Inspect Element
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
-      document.querySelectorAll("flex-container > div").slice(0,(rowNumber*5)+5).forEach(function(letter){
-       letter.style.backgroundColor = "#CCCCCC";
+      document.querySelectorAll("flex-container > div").forEach(function(letter){
+       if(letter.innerHTML != "_"){letter.style.backgroundColor = "#CCCCCC";}
       })
       charNumber = 0;
       rowNumber = rowNumber + 1;
