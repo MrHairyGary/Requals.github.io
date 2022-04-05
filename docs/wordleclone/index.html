@@ -59,18 +59,19 @@ You are not clever or funny for looking in Inspect Element
        charNumber = charNumber + 1;
        console.log(event.key);
       }  
-     } else if(event.key == "Backspace") {
-      if(charNumber > 0){
-       charNumber = charNumber - 1;
-       typedCharacters[charNumber] = "_"
-       document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
-      }
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
       charNumber = 0;
       rowNumber = rowNumber + 1;
      }
+    }
+    if(event.key == "Backspace") {
+      if(charNumber > 0){
+       charNumber = charNumber - 1;
+       typedCharacters[charNumber] = "_"
+       document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
+      }
     }
    })
   </script>
