@@ -63,7 +63,7 @@ You are not clever or funny for looking in Inspect Element
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
       document.querySelectorAll("flex-container > div").forEach(function(letter){
-       if(letter.innerHTML != "_"){letter.style.backgroundColor = "#CCCCCC";}
+       letter.style.color = "red";
       })
       charNumber = 0;
       rowNumber = rowNumber + 1;
