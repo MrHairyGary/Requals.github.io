@@ -43,8 +43,11 @@ You are not clever or funny for looking in Inspect Element
    typedCharacters = ["_","_","_","_","_"];
    charNumber = 0;
    rowNumber = 0;
+   function getWords(){
+    return document.querySelectorAll(".flex-container > div")
+   }
    function load(){
-    document.querySelectorAll(".flex-container > div").forEach(function(letter) {
+    getWords().forEach(function(letter) {
      letter.innerHTML = "_";
     })
    }
@@ -54,24 +57,22 @@ You are not clever or funny for looking in Inspect Element
     if(charNumber < 5) {
      if(/^[a-z]$/.test(event.key)) {
        typedCharacters[charNumber] = event.key.toUpperCase();
-       document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
+       getWords()[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
        charNumber = charNumber + 1;
        console.log(event.key);  
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
-      for(let i = 0;i < 30;i++){
-       document.querySelectorAll("flex-container > div")[i].style.backgroundColor = "#CDCDCD"
-      }
       charNumber = 0;
       rowNumber = rowNumber + 1;
+      
      }
     }
     if(event.key == "Backspace") {
       if(charNumber > 0){
        charNumber = charNumber - 1;
        typedCharacters[charNumber] = "_"
-       document.querySelectorAll(".flex-container > div")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
+       getWords()[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
       }
     }
    })
