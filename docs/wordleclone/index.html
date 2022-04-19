@@ -60,7 +60,7 @@ You are not clever or funny for looking in Inspect Element
   <script>
    document.addEventListener("keydown",function a() {
     if(charNumber < 5) {
-     if(/^[a-zA-Z]$/.test(event.key)) {
+     if(/^[A-z]$/.test(event.key)) {
        typedCharacters[charNumber] = event.key.toUpperCase();
        getWords()[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
        charNumber = charNumber + 1;
