@@ -50,6 +50,11 @@ You are not clever or funny for looking in Inspect Element
     getWords().forEach(function(letter) {
      letter.innerHTML = "_";
     })
+    fetch("words.txt")
+     .then((response) => {return response.json})
+     .then((data) => {
+      let text = data;
+     })
    }
   </script>
   <script>
