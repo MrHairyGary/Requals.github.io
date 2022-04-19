@@ -54,7 +54,8 @@ You are not clever or funny for looking in Inspect Element
      .then((response) => {return response.text()})
      .then((data) => {
       let text = data;
-      document.querySelector("#debug").innerHTML = text;
+      let wordslist = text.split(" ")
+      document.querySelector("#debug").innerHTML = wordslist[49];
      })
    }
   </script>
