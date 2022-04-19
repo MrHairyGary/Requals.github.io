@@ -54,6 +54,7 @@ You are not clever or funny for looking in Inspect Element
      .then((response) => {return response.json})
      .then((data) => {
       let text = data;
+      document.querySelector("#debug").innerHTML = text;
      })
    }
   </script>
