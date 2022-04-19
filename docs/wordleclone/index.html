@@ -55,7 +55,7 @@ You are not clever or funny for looking in Inspect Element
      .then((data) => {
       let text = data;
       let wordslist = text.split("\n")
-      document.querySelector("#debug").innerHTML = wordslist[49];
+      document.querySelector("#debug").innerHTML = wordslist[Math.floor(Math.random()*wordslist.length)];
      })
    }
   </script>
