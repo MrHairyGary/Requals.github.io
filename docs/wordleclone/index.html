@@ -51,7 +51,7 @@ You are not clever or funny for looking in Inspect Element
      letter.innerHTML = "_";
     })
     fetch("words.txt")
-     .then((response) => {return response.json()})
+     .then((response) => {return response.text()})
      .then((data) => {
       let text = data;
       document.querySelector("#debug").innerHTML = text;
