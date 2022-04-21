@@ -43,20 +43,27 @@ You are not clever or funny for looking in Inspect Element
    typedCharacters = ["_","_","_","_","_"];
    charNumber = 0;
    rowNumber = 0;
+   fetch("words.txt")
+     .then((response) => {return response.text()})
+     .then((data) => {
+      let text = data;
+      wordslist = text.split("\n")
+     })
    function getWords(){
     return document.querySelectorAll(".flex-container > div")
    }
    function load(){
     getWords().forEach(function(letter) {
      letter.innerHTML = "_";
+     document.querySelector("#debug").innerHTML = wordslist[5]
     })               
     fetch("words.txt")
      .then((response) => {return response.text()})
      .then((data) => {
       let text = data;
       wordslist = text.split("\n")
-      document.querySelector("#debug").innerHTML = wordslist[Math.floor(Math.random()*wordslist.length)];
      })
+     document.querySelector("#debug").innerHTML 
    }
   </script>
   <script>
