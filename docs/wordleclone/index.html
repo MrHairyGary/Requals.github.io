@@ -42,6 +42,7 @@ You are not clever or funny for looking in Inspect Element
   <script>
    typedCharacters = ["_","_","_","_","_"];
    charNumber = 0;
+   amf = {};
    rowNumber = 0;
    function getWords(){
     return document.querySelectorAll(".flex-container > div")
@@ -49,12 +50,12 @@ You are not clever or funny for looking in Inspect Element
    function load(){
     getWords().forEach(function(letter) {
      letter.innerHTML = "_";
-    })
+    })               
     fetch("words.txt")
      .then((response) => {return response.text()})
      .then((data) => {
       let text = data;
-      let wordslist = text.split("\n")
+      wordslist = text.split("\n")
       document.querySelector("#debug").innerHTML = wordslist[Math.floor(Math.random()*wordslist.length)];
      })
    }
@@ -70,9 +71,11 @@ You are not clever or funny for looking in Inspect Element
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
-      charNumber = 0;
-      rowNumber = rowNumber + 1;
-      getWords().forEach(function a(letter){words.setAttribute("style","background-color:#CDCDCD;")})
+      if(wordslist.includes(typedCharacters.join("").toLowercase())) {
+       charNumber = 0;
+       rowNumber = rowNumber + 1;
+       getWords().forEach(function a(letter){words.setAttribute("style","background-color:#CDCDCD;")})
+      }
      }
     }
     if(event.key == "Backspace") {
