@@ -55,15 +55,8 @@ You are not clever or funny for looking in Inspect Element
    function load(){
     getWords().forEach(function(letter) {
      letter.innerHTML = "_";
-     document.querySelector("#debug").innerHTML = wordslist[5]
     })               
-    fetch("words.txt")
-     .then((response) => {return response.text()})
-     .then((data) => {
-      let text = data;
-      wordslist = text.split("\n")
-     })
-     document.querySelector("#debug").innerHTML 
+    document.querySelector("#debug").innerHTML = wordslist[5]
    }
   </script>
   <script>
