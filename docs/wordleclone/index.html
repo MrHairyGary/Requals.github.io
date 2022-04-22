@@ -43,17 +43,24 @@ You are not clever or funny for looking in Inspect Element
    typedCharacters = ["_","_","_","_","_"];
    charNumber = 0;
    rowNumber = 0;
-   fetch("words.txt")
-     .then((response) => {return response.text()})
-     .then((data) => {
+   function getWords(a){
+    switch(a){
+     case "letters":
+      return document.querySelectorAll(".flex-container > div");
+      break;
+     case "words":
+      fetch("words.txt")
+      .then((response) => {return response.text()})
+      .then((data) => {
       let text = data;
-      wordslist = text.split("\n")
-     })
-   function getWords(){
-    return document.querySelectorAll(".flex-container > div")
+      let wordslist = text.split("\n");
+      return wordslist;
+      })
+     break;
+    }
    }
    function load(){
-    getWords().forEach(function(letter) {
+    getWords("letters").forEach(function(letter) {
      letter.innerHTML = "_";
     })               
     document.querySelector("#debug").innerHTML = wordslist[5]
@@ -64,16 +71,16 @@ You are not clever or funny for looking in Inspect Element
     if(charNumber < 5) {
      if(/^[a-zA-Z]$/.test(event.key)) {
        typedCharacters[charNumber] = event.key.toUpperCase();
-       getWords()[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
+       getWords("letters")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
        charNumber = charNumber + 1;
        console.log(event.key);  
      }
     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
-      if(wordslist.includes(typedCharacters.join("").toLowercase())) {
+      if(getWords("words").includes(typedCharacters.join("").toLowercase())) {
        charNumber = 0;
        rowNumber = rowNumber + 1;
-       getWords().forEach(function a(letter){words.setAttribute("style","background-color:#CDCDCD;")})
+       getWords("letters").forEach(function a(letter){words.setAttribute("style","background-color:#CDCDCD;")})
       }
      }
     }
@@ -81,7 +88,7 @@ You are not clever or funny for looking in Inspect Element
       if(charNumber > 0){
        charNumber = charNumber - 1;
        typedCharacters[charNumber] = "_"
-       getWords()[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
+       getWords("letters")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
       }
     }
    })
