@@ -52,9 +52,7 @@ You are not clever or funny for looking in Inspect Element
       fetch("words.txt")
       .then((response) => {return response.text()})
       .then((data) => {
-      let text = data;
-      let wordslist = text.split("\n");
-      return wordslist;
+      return data.split("\n");
       })
      break;
     }
