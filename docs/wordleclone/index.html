@@ -50,11 +50,8 @@ You are not clever or funny for looking in Inspect Element
       break;
      case "words":
       fetch("words.txt")
-      .then((response) => {return response.text()})
-      .then((data) => {
-      return data.split("\n");
-      })
-      break;
+      .then(response => {return response.text()})
+      .then(data => return(data.split("\n");))
     }
    }
    function load(){
