@@ -51,7 +51,8 @@ You are not clever or funny for looking in Inspect Element
      case "words":
       fetch("words.txt")
       .then(response => {return response.text()})
-      .then(data => return(data.split("\n");))
+      .then(data => {omb = data.split("\n")})
+      return omb
     }
    }
    function load(){
