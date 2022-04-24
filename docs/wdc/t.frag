@@ -6,9 +6,6 @@ uniform vec2 u_mouse;
 uniform vec2 u_resolution;
 uniform float u_time;
 
-
-
-
 void main() {
   vec2 nc = gl_FragCoord.xy/u_resolution;
   vec2 r = nc-vec2(0.5,0.5);
