@@ -13,5 +13,5 @@ void main() {
   for(int i = 0; i < 30; ++i){
     p = vec2(p.x*p.x - p.y*p.y + r.x,2.0*p.x*p.y + r.y);
   }
-  gl_FragColor = vec4(p,0.5,0.0);
+  gl_FragColor = vec4(0.5,0.5,0.5,0.5);
 }
