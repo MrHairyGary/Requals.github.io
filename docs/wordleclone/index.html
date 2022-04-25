@@ -51,8 +51,8 @@ You are not clever or funny for looking in Inspect Element
      case "words":
       fetch("words.txt")
       .then(response => {return response.text()})
-      .then(data => {omb = data.split("\n")})
-      return omb
+      .then(data => {window.omb = data.split("\n")})
+      return window.omb;
     }
    }
    function load(){
@@ -70,8 +70,7 @@ You are not clever or funny for looking in Inspect Element
        getWords("letters")[charNumber+(5*rowNumber)].innerHTML = typedCharacters[charNumber]
        charNumber = charNumber + 1;
        console.log(event.key);  
-     }
-    } else if(event.key == "Enter") {
+     } else if(event.key == "Enter") {
      if(rowNumber < 5) {
       if(getWords("words").includes(typedCharacters.join("").toLowercase())) {
        charNumber = 0;
