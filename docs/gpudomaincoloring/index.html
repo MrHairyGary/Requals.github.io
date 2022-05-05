@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GPU Test</title>
+<script src="https://cdn.jsdelivr.net/npm/gpu.js@latest/dist/gpu-browser.min.js"></script>
+<script>
+
+const gpu = new GPU()
+
+const canvascreate = gpu.createKernel(function(){
+  this.color(255,0,255,1)
+}).setOutput([100,100]).setGraphical(true); 
+canvascreate();
+
+const canvas = canvascreate.canvas;
+document.getElementsByTagName('body')[0].appendChild(canvas);
+</script>
+</head>
+<body>
+
+</body>
+</html>
