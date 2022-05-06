@@ -8,7 +8,7 @@
 const gpu = new GPU()
 
 const canvascreate = gpu.createKernel(function(){
-  this.color(1,0,1,1);
+  this.color(0,0,0);
 }).setOutput([100,100]).setGraphical(true); 
 canvascreate();
 
