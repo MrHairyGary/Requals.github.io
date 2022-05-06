@@ -2,21 +2,9 @@
 <html>
 <head>
 <title>GPU Test</title>
-<script src="https://unpkg.com/gpu.js@latest/dist/gpu-browser.min.js"></script>
-<script>
-
-const gpu = new GPU()
-
-const canvascreate = gpu.createKernel(function(){
-  this.color(0,0,0);
-}).setOutput([100,100]).setGraphical(true); 
-canvascreate();
-
-const canvas = canvascreate.canvas;
-document.getElementsByTagName('body')[0].appendChild(canvas);
-</script>
+<script type="text/javascript" src="https://unpkg.com/glsl-canvas-js/dist/umd/glsl-canvas.min.js"></script>
 </head>
 <body>
-
+<canvas class="glsl-canvas" data-fragment-url="fragment.glsl" width="500" height="500"></canvas>
 </body>
 </html>
