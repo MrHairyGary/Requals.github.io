@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Incremental Game List</title>
+  <style>
+    .header{
+      font-style: normal;
+      font-size: 30px;
+    }
+    #container{
+      border: 5px solid grey;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<h1 class="header">Large Game List</h1>
+<div id="container">
+  
+</div>
+<script>
+const reader = new FileReader();
+const container = document.getElementById("container")
+function setupLinks(lists,amount,parent) {
+for(let i = 0;i < amount;i++){
+  const link = document.createElement("a")
+  const linkText = document.createTextNode(lists[2][i])
+  link.href = lists[1][i]
+  const description = document.createElement("p")
+  const descriptionText = document.createTextNode(lists[3][i])
+  description.fontStyle = "italic"
+  link.appendChild(linkText)
+  parent.appendChild(link)
+  description.appendChild(descriptionText)
+  parent.appendChild(description)
+}
+}  
+</script>
+</body>
+</html>
