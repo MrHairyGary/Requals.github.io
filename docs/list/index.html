@@ -22,7 +22,7 @@
 const reader = new FileReader();
 const container = document.getElementById("container")
 function setupLinks(lists,amount,parent) {
-for(let i = 0;i < amount;i++){
+for(let i = 1;i < amount;i++){
   const link = document.createElement("a")
   const linkText = document.createTextNode(lists[2][i])
   link.href = lists[1][i]
