@@ -12,29 +12,29 @@
       border-radius: 5px;
     }
   </style>
+  <script>
+  const reader = new FileReader();
+  const container = document.getElementById("container")
+  function setupLinks(lists,amount,parent) {
+  for(let i = 0i < amount;i++){
+    const link = document.createElement("a")
+    const linkText = document.createTextNode(lists[1][i])
+    link.href = lists[0][i]
+    const description = document.createElement("p")
+    const descriptionText = document.createTextNode(lists[2][i])
+    description.fontStyle = "italic"
+    link.appendChild(linkText)
+    parent.appendChild(link)
+    description.appendChild(descriptionText)
+    parent.appendChild(description)
+  }
+  }  
+  </script>
 </head>
 <body>
 <h1 class="header">Large Game List</h1>
 <div id="container">
   
 </div>
-<script>
-const reader = new FileReader();
-const container = document.getElementById("container")
-function setupLinks(lists,amount,parent) {
-for(let i = 0i < amount;i++){
-  const link = document.createElement("a")
-  const linkText = document.createTextNode(lists[1][i])
-  link.href = lists[0][i]
-  const description = document.createElement("p")
-  const descriptionText = document.createTextNode(lists[2][i])
-  description.fontStyle = "italic"
-  link.appendChild(linkText)
-  parent.appendChild(link)
-  description.appendChild(descriptionText)
-  parent.appendChild(description)
-}
-}  
-</script>
 </body>
 </html>
