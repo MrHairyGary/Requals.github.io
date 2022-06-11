@@ -21,6 +21,7 @@
 <script>
   const reader = new FileReader();
   const container = document.getElementById("container")
+  const json = fetch("links.json").then(response => response.json()).then(data)
   function setupLinks(lists,amount,parent) {
   for(let i = 0;i < amount;i++){
     const link = document.createElement("a")
