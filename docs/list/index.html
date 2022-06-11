@@ -21,7 +21,7 @@
 <script>
   const reader = new FileReader();
   const container = document.getElementById("container");
-  var lists;
+  let lists;
   fetch("links.json").then(response => response.json()).then(data => lists = data)
   function setupLinks(lists,amount,parent) {
   for(let i = 0;i < amount;i++){
@@ -37,10 +37,8 @@
     parent.appendChild(description);
   }
   }  
-</script>
-<script>
   console.log(lists["links"])
   document.onload = setupLinks(lists["links"],lists["links"].length,container)
- </script>
+</script>
 </body>
 </html>
