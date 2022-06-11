@@ -18,10 +18,10 @@
   function setupLinks(lists,amount,parent) {
   for(let i = 0;i < amount;i++){
     const link = document.createElement("a")
-    const linkText = document.createTextNode(lists[1][i])
-    link.href = lists[0][i]
+    const linkText = document.createTextNode(lists[i][1])
+    link.href = lists[i][0]
     const description = document.createElement("p")
-    const descriptionText = document.createTextNode(lists[2][i])
+    const descriptionText = document.createTextNode(lists[i][2])
     description.fontStyle = "italic"
     link.appendChild(linkText)
     parent.appendChild(link)
