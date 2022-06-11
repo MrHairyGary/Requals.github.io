@@ -35,7 +35,7 @@
     parent.appendChild(description);
   }
   }  
-  fetch("links.json").then(response => response.json()).then(data => setupLinks(lists["links"],lists["links"].length,container))
+  fetch("links.json").then(response => response.json()).then(data => setupLinks(data["links"],data["links"].length,container))
 </script>
 </body>
 </html>
