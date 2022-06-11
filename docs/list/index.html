@@ -21,8 +21,6 @@
 <script>
   const reader = new FileReader();
   const container = document.getElementById("container");
-  let lists;
-  fetch("links.json").then(response => response.json()).then(data => lists = data)
   function setupLinks(lists,amount,parent) {
   for(let i = 0;i < amount;i++){
     const link = document.createElement("a");
@@ -37,8 +35,7 @@
     parent.appendChild(description);
   }
   }  
-  console.log(lists["links"])
-  document.onload = setupLinks(lists["links"],lists["links"].length,container)
+  fetch("links.json").then(response => response.json()).then(data => setupLinks(lists["links"],lists["links"].length,container))
 </script>
 </body>
 </html>
