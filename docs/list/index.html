@@ -28,14 +28,16 @@
     link.href = lists[i][0];
     const description = document.createElement("p");
     const descriptionText = document.createTextNode(lists[i][2]);
+    const hrBreak = document.createElement("hr");
     description.style.fontStyle = "italic";
     link.appendChild(linkText);
     parent.appendChild(link);
     description.appendChild(descriptionText);
     parent.appendChild(description);
+    parent.appendChild(hrBreak);
   }
   }  
-  fetch("links.json").then(response => response.json()).then(data => setupLinks(data["links"],data["links"].length,container))
+  fetch("links.json").then(response => response.json()).then(data => setupLinks(data["links"],data["links"].length,container));
 </script>
 </body>
 </html>
