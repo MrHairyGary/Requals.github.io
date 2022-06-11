@@ -28,7 +28,7 @@
     link.href = lists[i][0]
     const description = document.createElement("p")
     const descriptionText = document.createTextNode(lists[i][2])
-    description.fontStyle = "italic"
+    description.style.fontStyle = "italic"
     link.appendChild(linkText)
     parent.appendChild(link)
     description.appendChild(descriptionText)
