@@ -12,7 +12,13 @@
       border-radius: 5px;
     }
   </style>
-  <script>
+</head>
+<body>
+<h1 class="header">Large Game List</h1>
+<div id="container">
+  
+</div>
+<script>
   const reader = new FileReader();
   const container = document.getElementById("container")
   function setupLinks(lists,amount,parent) {
@@ -29,12 +35,6 @@
     parent.appendChild(description)
   }
   }  
-  </script>
-</head>
-<body>
-<h1 class="header">Large Game List</h1>
-<div id="container">
-  
-</div>
+</script>
 </body>
 </html>
