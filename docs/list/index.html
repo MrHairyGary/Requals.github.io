@@ -20,20 +20,21 @@
 </div>
 <script>
   const reader = new FileReader();
-  const container = document.getElementById("container")
-  fetch("links.json").then(response => response.json()).then(data => console.log(JSON.stringify(data)))
+  const container = document.getElementById("container");
+  var lists;
+  fetch("links.json").then(response => response.json()).then(data => lists = data)
   function setupLinks(lists,amount,parent) {
   for(let i = 0;i < amount;i++){
-    const link = document.createElement("a")
-    const linkText = document.createTextNode(lists[i][1])
-    link.href = lists[i][0]
-    const description = document.createElement("p")
-    const descriptionText = document.createTextNode(lists[i][2])
-    description.style.fontStyle = "italic"
-    link.appendChild(linkText)
-    parent.appendChild(link)
-    description.appendChild(descriptionText)
-    parent.appendChild(description)
+    const link = document.createElement("a");
+    const linkText = document.createTextNode(lists[i][1]);
+    link.href = lists[i][0];
+    const description = document.createElement("p");
+    const descriptionText = document.createTextNode(lists[i][2]);
+    description.style.fontStyle = "italic";
+    link.appendChild(linkText);
+    parent.appendChild(link);
+    description.appendChild(descriptionText);
+    parent.appendChild(description);
   }
   }  
 </script>
