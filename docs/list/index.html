@@ -26,6 +26,7 @@
     const link = document.createElement("a");
     const linkText = document.createTextNode(lists[i][1]);
     link.href = lists[i][0];
+    link.target = "_blank"
     const description = document.createElement("p");
     const descriptionText = document.createTextNode(lists[i][2]);
     const hrBreak = document.createElement("hr");
@@ -34,7 +35,9 @@
     parent.appendChild(link);
     description.appendChild(descriptionText);
     parent.appendChild(description);
-    parent.appendChild(hrBreak);
+    if(lists.length() !== i) {
+      parent.appendChild(hrBreak);
+    }
   }
   }  
   fetch("links.json").then(response => response.json()).then(data => setupLinks(data["links"],data["links"].length,container));
