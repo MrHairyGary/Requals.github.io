@@ -31,14 +31,11 @@
 <script>
   const reader = new FileReader();
   const container = document.getElementById("container");
-  function sortn(a,b) {
-    const nameA = a[1]
-    const nameB = b[1]
-    return 2*(nameA > nameB) - 1
-  }
-  function setupLinks(list,amount,parent) {
+  function setupLinks(listp,amount,parent) {
   for(let i = 0;i < amount;i++){
-    const lists = lists.sort(sortn)
+    const lists = listp.sort(function(a,b){
+      a[2].localeCompare(b[2])   
+    })
     const link = document.createElement("a");
     const linkText = document.createTextNode(lists[i][1]);
     link.href = lists[i][0];
