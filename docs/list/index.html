@@ -34,7 +34,7 @@
   function setupLinks(listp,amount,parent) {
   for(let i = 0;i < amount;i++){
     const lists = listp.sort(function(a,b){
-      a[2].localeCompare(b[2])   
+      return a[1].localeCompare(b[1])   
     })
     const link = document.createElement("a");
     const linkText = document.createTextNode(lists[i][1]);
