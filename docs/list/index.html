@@ -31,13 +31,14 @@
 <script>
   const reader = new FileReader();
   const container = document.getElementById("container");
-  function sort(a,b) {
+  function sortn(a,b) {
     const nameA = a[1]
     const nameB = b[1]
     return 2*(nameA > nameB) - 1
   }
-  function setupLinks(lists,amount,parent) {
+  function setupLinks(list,amount,parent) {
   for(let i = 0;i < amount;i++){
+    const lists = lists.sort(sortn)
     const link = document.createElement("a");
     const linkText = document.createTextNode(lists[i][1]);
     link.href = lists[i][0];
