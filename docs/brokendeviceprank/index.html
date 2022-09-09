@@ -2,16 +2,22 @@
 <html>
   <head>
     <style>
+      canvas{
+        width: 100vw;
+        height: 100vh;
+      }
     </style>
   </head>
   <body>
     <canvas id="static"></canvas>
     <script>
-    const canvas = document.getElementById("static")
-    const ctx = canvas.getContext("2d")
+    const canvas = document.getElementById("static");
+    const ctx = canvas.getContext("2d");
     for(let x = 0;x++;x > screen.width) {
       for(let y = 0;x++;x > screen.height) {
-        //finish later after school
+        ctx.strokeStyle = "#FFAAFF";
+        ctx.rect(x,y,1,1);
+        ctx.fill();
       }
     }
      
