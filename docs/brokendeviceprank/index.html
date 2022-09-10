@@ -13,12 +13,12 @@
     <script>
     const canvas = document.getElementById("static");
     const ctx = canvas.getContext("2d");
-    for(let x = 0; x < window.innerWidth; x++) {
-      for(let y = 0; y < window.innerHeight; y++) {
-        ctx.strokeStyle = "#FFAAFF";
-        ctx.rect(x,y,1,1);
-        ctx.stroke();
-      }
+    for(let xm = 0; xm < 1000; xm++) {
+      ctx.fillStyle = "hsl(0, 0%," + string(Math.floor(Math.random()*100)) + "%);
+      let x = Math.floor(Math.random() * window.innerWidth)
+      let y = Math.floor(Math.random() * window.innerHeight)
+      ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.1),Math.floor(Math.random()*window.innerHeight*0.1));
+      ctx.fill();
     }
      
     </script>
