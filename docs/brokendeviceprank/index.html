@@ -14,7 +14,7 @@
     canvas.height = window.innerHeight
     canvas.width = window.innerWidth
     for(let xm = 0; xm < 300; xm++) {
-      const colortr = Math.floor(255*Math.random());
+      const colortr = Math.floor((xm*Math.random())/(300/255));
       const colort = `rgb(${colortr},${colortr},${colortr})`;
       ctx.fillStyle = colort;
       let x = Math.floor(Math.random() * window.innerWidth)
