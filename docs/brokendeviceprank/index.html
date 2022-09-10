@@ -13,14 +13,15 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     canvas.height = window.innerHeight
     canvas.width = window.innerWidth
-    for(let xm = 0; xm < 1000; xm++) {
-      ctx.fillStyle = "hsl(0, 0%, " + Math.floor(Math.random()*100).toString() + "%)";
+    for(let xm = 0; xm < 300; xm++) {
+      const colort = "hsl(0, 0%, " + Math.floor(Math.random()*100).toString() + "%)";
+      ctx.fillStyle = colort;
       let x = Math.floor(Math.random() * window.innerWidth)
       let y = Math.floor(Math.random() * window.innerHeight)
-      ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.01),Math.floor(Math.random()*window.innerHeight*0.01));
+      ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.01),Math.floor(Math.random()*window.innerHeight*0.1));
       ctx.fill();
     }
-    },1000)
+    },100)
     </script>
   </body>
 </html>
