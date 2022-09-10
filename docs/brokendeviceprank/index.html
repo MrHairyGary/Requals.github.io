@@ -2,25 +2,24 @@
 <html>
   <head>
     <style>
-      canvas{
-        width: 100vw;
-        height: 100vh;
-      }
     </style>
   </head>
   <body>
     <canvas id="static"></canvas>
     <script>
     const canvas = document.getElementById("static");
+    setInterval(function(){
     const ctx = canvas.getContext("2d");
-    for(let xm = 0; xm < 1000; xm++) {
+    canvas.height = window.innerHeight
+    canvas.width = window.innerWidth
+    for(let xm = 0; xm < 10000; xm++) {
       ctx.fillStyle = "hsl(0, 0%," + Math.floor(Math.random()*100).toString() + "%)";
       let x = Math.floor(Math.random() * window.innerWidth)
       let y = Math.floor(Math.random() * window.innerHeight)
-      ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.1),Math.floor(Math.random()*window.innerHeight*0.1));
+      ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.01),Math.floor(Math.random()*window.innerHeight*0.01));
       ctx.fill();
     }
-     
+    },100)
     </script>
   </body>
 </html>
