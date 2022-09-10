@@ -14,7 +14,7 @@
     const canvas = document.getElementById("static");
     const ctx = canvas.getContext("2d");
     for(let xm = 0; xm < 1000; xm++) {
-      ctx.fillStyle = "hsl(0, 0%," + string(Math.floor(Math.random()*100)) + "%);
+      ctx.fillStyle = "hsl(0, 0%," + string(Math.floor(Math.random()*100)) + "%)";
       let x = Math.floor(Math.random() * window.innerWidth)
       let y = Math.floor(Math.random() * window.innerHeight)
       ctx.rect(x,y,Math.floor(Math.random()*window.innerWidth*0.1),Math.floor(Math.random()*window.innerHeight*0.1));
