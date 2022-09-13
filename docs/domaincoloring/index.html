@@ -126,11 +126,11 @@ function up() {
  update();
 }
 function left() {
- localx = localx - 200/zooming;
+ localx = localx - 50/(zooming*zooming);
  update();
 }
 function right() {
- localx = localx + 200/zooming;
+ localx = localx + 50/(zooming*zooming);
  update();
 }
 function down() {
