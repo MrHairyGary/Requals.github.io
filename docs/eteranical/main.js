@@ -35,4 +35,4 @@ const Game = new GameInstance();
 Log.hide();
 Settings.hide();
 Game.show();
-mainConsole.log("Loaded!")
+Log.log("Loaded!")
