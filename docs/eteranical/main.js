@@ -1,22 +1,26 @@
 class Game{
-  constructor(){}
-  
+  constructor({visible=true}){
+    this.visible = visible;
+    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
+  }
   static element = document.querySelector(".game");
 }
-
 class Settings{
-  constructor(){}
-  
+  constructor({visible=false}){
+    this.visible = visible;
+    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
+    }
+  }
   static element = document.querySelector(".settings");
 }
 
 class GameConsole{
-  constructor({history = []}){
-    this.history = [];
+  constructor({history = [],visible=false}){
+    this.history = history;
+    this.visible = visible;
+    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
   }
-  
   static element = document.querySelector(".console");
-  
   //IPad cannot look at console
   log(message){
     this.history.push(message)
