@@ -23,7 +23,7 @@ class GameConsole{
   element = document.querySelector(".console");
   hide(){element.style.display="none"}
   show(){element.style.display="block"}
-  //IPad cannot look at console
+  //IPad cannot look at console, also for buy/sell/whatever messages
   log(message){
     this.history.push(message)
   }
