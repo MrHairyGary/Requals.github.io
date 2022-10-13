@@ -1,26 +1,28 @@
+
 class GameInstance{
-  constructor({visible=true}){
-    this.visible = visible;
-    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
+  constructor(){
   }
   static element = document.querySelector(".game");
+  hide(){element.style.display="none"}
+  show(){element.style.display="block"}
+  
 }
 class SettingsInstance{
-  constructor({visible=false}){
-    this.visible = visible;
-    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
-    }
+  constructor(){
   }
   static element = document.querySelector(".settings");
+  hide(){element.style.display="none"}
+  show(){element.style.display="block"}
+  
 }
 
 class GameConsole{
-  constructor({history = [],visible=false}){
+  constructor({history = []}){
     this.history = history;
-    this.visible = visible;
-    if(visible){this.element.style.display = "block"} else {this.element.style.display = "none"}
   }
   static element = document.querySelector(".console");
+  hide(){element.style.display="none"}
+  show(){element.style.display="block"}
   //IPad cannot look at console
   log(message){
     this.history.push(message)
@@ -30,4 +32,5 @@ class GameConsole{
 const Log = new GameConsole();
 const Settings = new SettingsInstance();
 const Game = new GameInstance();
+Log.hide();Settings.hide();Game.show();
 mainConsole.log("Loaded!")
