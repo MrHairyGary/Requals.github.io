@@ -17,7 +17,7 @@ class SettingsInstance{
 }
 
 class GameConsole{
-  constructor({history = []}){
+  constructor(history = []){
     this.history = history;
   }
   element = document.querySelector(".console");
@@ -29,7 +29,7 @@ class GameConsole{
   }
 }
 
-const Log = new GameConsole([]);
+const Log = new GameConsole();
 const Settings = new SettingsInstance();
 const Game = new GameInstance();
 Log.hide();
