@@ -32,5 +32,7 @@ class GameConsole{
 const Log = new GameConsole();
 const Settings = new SettingsInstance();
 const Game = new GameInstance();
-Log.hide();Settings.hide();Game.show();
+Log.hide();
+Settings.hide();
+Game.show();
 mainConsole.log("Loaded!")
