@@ -5,6 +5,7 @@
 .gui{
   height: 90vh;
   width: 100vw;
-  padding-top: 10vh;
+  margin: 10vh 0px 0px 0px;
+  padding: 5vh
   background-color: azure;
 }
